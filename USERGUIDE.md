@@ -122,7 +122,7 @@ You will see the Pinephone's blue LED indicator activate.
 
 The Screenlock has two modes:
 
-- **Screenlock display on mode**: Locks the screen and disables input; but keys the screen on
+- **Screenlock display on mode**: Locks the screen and disables input; but keeps the screen on
   - Indicated by blue LED
 - **Screenlock display off mode**: Locks the screen, disables input, and turns the screen off
   - Indicated by red LED
