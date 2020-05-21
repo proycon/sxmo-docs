@@ -9,13 +9,13 @@
 ## **Prebaked Images**
 
 The easiest way to get started using Sxmo is just to grab a prebaked image from our image release page.
-These images are built via our [continous integration system](https://builds.sr.ht/~mil/sxmo-image-builder) 
-based on the lastest state of our [alpine repository](http://sxmo.lrdu.org/alpine_repository).  These
+These images are built via our [continuous integration system](https://builds.sr.ht/~mil/sxmo-image-builder) 
+based on the latest state of our [alpine repository](http://sxmo.lrdu.org/alpine_repository).  These
 images under the hood are based on [postmarketOS](http://postmarketos.org).
 
 **Install Steps:**
 
-1. Download the lastest release image from: [Sxmo Pinephone Images](http://images.lrdu.org/)
+1. Download the latest release image from: [Sxmo Pinephone Images](http://images.lrdu.org/)
 2. Extract the image: `unxz sxmo-pinephone*.xz`
 3. Write  the image to your SD card: `dd if=sxmo-pinephone*.img of=/dev/mmcblkp0`
 4. Pop the SD card into your Pinephone and see the [Userguide](https://git.sr.ht/~mil/sxmo-docs/tree/master/USERGUIDE.md)
@@ -25,7 +25,7 @@ images under the hood are based on [postmarketOS](http://postmarketos.org).
 
 If you don't want to use a prebaked image or already have a barebones Alpine or pmOS install, 
 you can instead use the `sxmo-ui` package from our alpine repository directly. A single 
-meta-package `sxmo-ui` is responsible for installing all of sxmo's subpackages and required
+meta-package `sxmo-ui` is responsible for installing all of Sxmo's subpackages and required
 dependencies.
 
 The install process for an existing Alpine or pmOS install looks like:

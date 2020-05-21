@@ -12,7 +12,7 @@ The Sxmo project from a development point of view is a combination of a few diff
 2. [lisgd](http://git.sr.ht/~mil/lisgd): A custom piece of software for gestures built from scratch for Sxmo
 3. [Suckless forks](https://sr.ht/~mil/Sxmo/sources): Forks of [Suckless](http://suckless.org) software which has been mobile optimized and designed to fit within the larger Sxmo project
 4. [sxmo-alpine](http://git.sr.ht/~mil/sxmo-alpine): Alpine APKBUILDs to create packages for (1), (2), and (3) as well as a few extra (upstream-based) packages; also contains CI to build these packages on sr.ht's infra and upload to sxmo.lrdu.org/alpine_repository
-5. [sxmo-image-builder](http://git.sr.ht/~mil/sxmo-image-builder): CI that builds images for the Pinephone on sr.ht infa via pmbootstrap
+5. [sxmo-image-builder](http://git.sr.ht/~mil/sxmo-image-builder): CI that builds images for the Pinephone on sr.ht infra via pmbootstrap
 
 All of the Sxmo project source repositories can be viewed at:
 
@@ -27,8 +27,8 @@ We use the bug tracker at:
 Please search the existing tickets before submitting a new ticket.
 You are free to put in feature requests here or pull tickets off here to get ideas for patches.
 
-## **Submitting Patches or General Dicussion**
-We use a single mailing list for patch submission and dicussion of the above subcomponents of the Sxmo project.
+## **Submitting Patches or General Discussion**
+We use a single mailing list for patch submission and discussion of the above subcomponents of the Sxmo project.
 
 The mailing list is at:
 

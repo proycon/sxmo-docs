@@ -24,7 +24,7 @@
 
 The core of the Sxmo UI is based on the [dwm](http://dwm.suckless.org) window manager patched with
 (among other patches), the [multikey](https://dwm.suckless.org/patches/multikey/) patch. This patch allows dwm to
-recognize rapid succesive (e.g. double/triple clicks) button presses to
+recognize rapid successive (e.g. double/triple clicks) button presses to
 trigger different actions. The three hardware buttons on the Pinephone
 thus can trigger 9 different actions.
 
@@ -35,7 +35,7 @@ The default button bindings are:
   - **2 taps**: Launch [global system menu](#strongincluded-menusstrong)
   - **3 taps (or hold)**: Activate [screen lock](#strongscreen-lockstrong)
 - **Volume Lower**:
-  - **1 tap**: Toggle dwm layout algorithm (between monocole/tile/bstack)
+  - **1 tap**: Toggle dwm layout algorithm (between monocle/tile/bstack)
   - **2 taps**: Shift current client in stack
   - **3 taps (or hold)**: Kill client
 - **Powerkey**:
@@ -65,7 +65,7 @@ Wherein L=left, R=right, D=down, U=up, the default swipe gestures are:
 
 ## **The Menu System**
 
-Menus are a central feature of Sxmo and are navigatable through using
+Menus are a central feature of Sxmo and are navigable through using
 the Pinephone's 3 hardware buttons. Also you can use the touchscreen
 to tap your selection if you'd like as well. The menus are essentially
 scripts around a custom patched version of [dmenu](http://tools.suckless.org/dmenu). Note 
@@ -83,30 +83,30 @@ The default menu bindings for the Pinephone buttons are:
 
 **1. Application-specific context menus**
 
-The application-specific context menu (trigged by single tapping the volume
-raise key) lets you you access application-speicifc features of the currently
+The application-specific context menu (triggered by single tapping the volume
+raise key) lets you you access application-specific features of the currently
 focused window. For example while using mpv, the application-specific 
 context menu lets you pause the video, increase/decrease volume, seek, etc. 
 You can reference the [sxmo_appmenu.sh](https://git.sr.ht/~mil/sxmo-utils/tree/master/scripts/core/sxmo_appmenu.sh) script for a full list of functionality.
 
 **2. Global system menu (Sys)**
 
-The global system menu (trigged by double tapping the volume raise button)
+The global system menu (triggered by double tapping the volume raise button)
 lets you launch applications, toggle system preferences and more. This is
-proably the closest thing to 'homescreen' in traditional phone OS's in
+probably the closest thing to 'homescreen' in traditional phone OS's in
 that it can be the starting point to access much of the functionality
 in Sxmo. This menu lets you:
 
 - Launch [Scripts and Applications](#strongincluded-scripts-and-applicationsstrong)
 - Adjust volume
-- Make/Recieve [Calls and Texts](#strongcalls-and-textingstrong)
+- Make/Receive [Calls and Texts](#strongcalls-and-textingstrong)
 - Launch the Camera
 - Connect to Wifi
 
 **3. Global config menu (Config)**
 
-The global config menu is accesible by launching the global system menu
-aformentioned and selecting *Config*. This menu let you:
+The global config menu is accessible by launching the global system menu
+aforementioned and selecting *Config*. This menu let you:
 
 - Adjust system brightness
 - Toggle modem monitoring, view modem information and the modem log
@@ -124,11 +124,11 @@ The Screenlock has two modes:
 
 - **Screenlock display on mode**: Locks the screen and disables input; but keys the screen on
   - Indicated by blue LED
-- **Screenlock display off mode**: Locks the screena, disables input, and turns the screen off
+- **Screenlock display off mode**: Locks the screen, disables input, and turns the screen off
   - Indicated by red LED
 
 While using the Screenlock, only the following bindings apply
-(and overide the [default dwm button bindings](#strongglobal-ui-controlsstrong)):
+(and override the [default dwm button bindings](#strongglobal-ui-controlsstrong)):
 
 - **Volume Raise** or **Volume Lower**:
   - **3 taps**: Toggle between screenlock display on/off mode
@@ -147,7 +147,7 @@ bit after booting before trying modem functionality to allow the modem to
 connect.
 
 Modem functionality is based on using the [dmenu menu system](#strongthe-menu-systemstrong)
-and accesible through the [global system menu](#strongincluded-menusstrong).
+and accessible through the [global system menu](#strongincluded-menusstrong).
 The scripting behind the scenes works via [ModemManager](https://www.freedesktop.org/wiki/Software/ModemManager/) using the [mmcli](https://www.freedesktop.org/software/ModemManager/man/1.0.0/mmcli.8.html) command line tool.
 
 **Calling**
@@ -192,7 +192,7 @@ While a call is incoming:
 - The vibration motor will trigger for 3 seconds
 - The green LED will trigger
 - To pickup the call, open either the [global or application](#strongincluded-menusstrong) menu and you'll
-  see a menu entry to pickup the call; ofcourse this is timesensitive and this
+  see a menu entry to pickup the call; of course this is timesensitive and this
   menu entry will only be visible while the other party's line is ringing
 
 When a new text message comes in:
@@ -208,7 +208,7 @@ scripts.
 
 **Included Scripts:**
 
-- **Timer**: A simple countdown timer script that vibrates the phones upon competion
+- **Timer**: A simple countdown timer script that vibrates the phones upon completion
 - **Youtube**: Search youtube by keyword in dmenu and then view in mpv (script based on [idiotbox](https://codemadness.org/idiotbox.html))
 - **Youtube (audio)**: Search youtube by keyword in dmenu and then listen in mpv (script based on [idiotbox](https://codemadness.org/idiotbox.html))
 - **Weather**: United States weather forecast (by zipcode) dmenu script
@@ -224,7 +224,7 @@ scripts.
 - **Foxtrotgps**: A minimal GPS application to help you navigate the world
 
 ## **Wifi**
-At the time being the primary way to get connected to the Internet in sxmo
+At the time being the primary way to get connected to the Internet in Sxmo
 is through wifi. There is a menu entry in the [global system menu](#strongincluded-menusstrong) to connect 
 to wifi. This is essentially this is just a wrapper to launch `nnmtui`. Make sure
 the killswitch for Wifi on your Pinephone is in the enabled position.

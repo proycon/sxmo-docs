@@ -15,9 +15,9 @@ Overview of Sxmo's features:
 
 - **Pinephone buttons actions**: (via [dwm](http://git.sr.ht/~mil/sxmo-dwm)) press hardware buttons different number of times for different actions (like launching terminals, browsers, and window management)
 - **Swipe gestures**: (via [lisgd](http://git.sr.ht/~mil/lisgd)) move between workspaces, move windows between workspaces, and raise/lower volume via swipe gestures
-- **Menu interfaces**: (via [dmenu](http://git.sr.ht/~mil/sxmo-dmenu)) use the Pinephone hardware buttons to select menu entries (e.g. volume up/volume down/select translates to next/previous/select)
+- **Menu interfaces**: (via [dmenu](http://git.sr.ht/~mil/sxmo-dmenu)) use the Pinephone hardware buttons to select menu entries (e.g. volume up/volume down/select translates to previous/next/select)
 - **Onscreen keyboard**: (via [svkbd](http://git.sr.ht/~mil/sxmo-svkbd)) Multiple layer responsive onscreen keyboard that autoadjusts WM space
-- **Window Managment**: (via [dwm](http://git.sr.ht/~mil/sxmo-dwm)) Arrange windows (in classic dwm layouts like monocole, tile, and bstack), kill clients, and cycle window focus using Pinephone buttons
+- **Window Managment**: (via [dwm](http://git.sr.ht/~mil/sxmo-dwm)) Arrange windows (in classic dwm layouts like monocle, tile, and bstack), kill clients, and cycle window focus using Pinephone buttons
 - **Calls & Texting**: (via [dmenu scripts/mmcli](https://git.sr.ht/~mil/sxmo-utils/tree/master/scripts/modem)) Compose texts in $EDITOR / vim-like editor, read texts in $PAGER, make calls (and audio-route) via dmenu script utilizing modemmanager
 - **Incoming Text/Call notifications**:  (via [script](https://git.sr.ht/~mil/sxmo-utils/tree/master/scripts/modem/sxmo_modemmonitor.sh)) Vibrate phone & blink led when there is an incoming call/text
 - **Lock Screen**: (via [custom C program](https://git.sr.ht/~mil/sxmo-utils/tree/master/programs/sxmo_screenlock.c)) Disable screen input and toggle screen on/off for listening to music / pocket use
