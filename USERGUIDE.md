@@ -16,7 +16,7 @@
 - [Included Scripts and Applications](#strongincluded-scripts-and-applicationsstrong)
 - [Wifi](#strongwifistrong)
 - [Audio Routing](#strongaudio-routingstrong)
-
+- [Expand Partition to Full SD Card Size](#strongexpand-partition-to-full-sd-card-sizestrong)
 
 ## **Global UI Controls**
 
@@ -237,3 +237,14 @@ At the time being audio is always routed through the headphone jack by default
 on boot.  When in a call, audio is routed to the earpiece and then changeable
 through the in call menu. Upon the call ending, audio is routed back to the
 headphone jack. In the future audio routing will likely be controllable through menus.
+
+## **Expand Partition to Full SD Card Size**
+The images that our continuous integration system bakes won't automatically
+resize on boot unfortunately; so you may notice you'll quickly run out of disk
+space as only a small amount of extra disk space is reserved. To resolve this
+you can run from another computer with your the Sxmo SD card mounted as `mmcblk1`:
+
+```
+echo -e "d\n2\nn\np\n\n\n\nw" | sudo  fdisk /dev/mmcblk1
+resize2fs /dev/mmblkp2
+```
