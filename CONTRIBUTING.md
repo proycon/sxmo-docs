@@ -34,6 +34,6 @@ The mailing list is at:
 
 [https://lists.sr.ht/~mil/sxmo-devel](https://lists.sr.ht/~mil/sxmo-devel)
 
-If you're new to development using `git-send-mail` don't be discourage and please still contribute!
+If you're new to development using `git-send-email` don't be discouraged and please still contribute!
 You can check out the guide at: [https://git-send-email.io/](https://git-send-email.io/) for some
-tips on how to get started using git-send-mail.
+tips on how to get started using git-send-email.

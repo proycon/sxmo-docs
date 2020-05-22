@@ -246,5 +246,5 @@ you can run from another computer with your the Sxmo SD card mounted as `mmcblk1
 
 ```
 echo -e "d\n2\nn\np\n\n\n\nw" | sudo  fdisk /dev/mmcblk1
-resize2fs /dev/mmblkp2
+resize2fs /dev/mmblk1p2
 ```
