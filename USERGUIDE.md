@@ -245,6 +245,6 @@ space as only a small amount of extra disk space is reserved. To resolve this
 you can run from another computer with your the Sxmo SD card mounted as `mmcblk1`:
 
 ```
-echo -e "d\n2\nn\np\n\n\n\nw" | sudo  fdisk /dev/mmcblk1
-resize2fs /dev/mmblk1p2
+echo -e "d\n2\nn\np\n\n\n\nw" | fdisk /dev/mmcblk1
+resize2fs /dev/mmcblk1p2
 ```
