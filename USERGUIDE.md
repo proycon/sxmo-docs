@@ -208,6 +208,7 @@ scripts.
 
 **Included Scripts:**
 
+- **Web Search**: Search duckduckgo with the query provided by the user (bangs work too)
 - **Timer**: A simple countdown timer script that vibrates the phones upon completion
 - **Youtube**: Search youtube by keyword in dmenu and then view in mpv (script based on [idiotbox](https://codemadness.org/idiotbox.html))
 - **Youtube (audio)**: Search youtube by keyword in dmenu and then listen in mpv (script based on [idiotbox](https://codemadness.org/idiotbox.html))
@@ -218,8 +219,10 @@ scripts.
 
 - **Surf**: The suckless minimalistic browser based on Webkit
 - **Netsurf**: An alternative minimalistic browser that renders really fast
-- **Sacc**: A great minimalistic gopher browser; launches by default to a good phlog aggregator
 - **Firefox**: The infamous FOSS browser often symbolized by a fox
+- **Sacc**: A great minimalistic gopher browser; launches by default to a good phlog aggregator
+- **W3m**: A text-based browser with vim-like keybindings
+- **Xcalc**: A nice (and fast) calculator app
 - **St**: The suckless terminal
 - **Foxtrotgps**: A minimal GPS application to help you navigate the world
 
