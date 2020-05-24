@@ -21,7 +21,7 @@ Overview of Sxmo's features:
 - **Calls & Texting**: (via [dmenu scripts/mmcli](https://git.sr.ht/~mil/sxmo-utils/tree/master/scripts/modem)) Compose texts in $EDITOR / vim-like editor, read texts in $PAGER, make calls (and audio-route) via dmenu script utilizing modemmanager
 - **Incoming Text/Call notifications**:  (via [script](https://git.sr.ht/~mil/sxmo-utils/tree/master/scripts/modem/sxmo_modemmonitor.sh)) Vibrate phone & blink led when there is an incoming call/text
 - **Lock Screen**: (via [custom C program](https://git.sr.ht/~mil/sxmo-utils/tree/master/programs/sxmo_screenlock.c)) Disable screen input and toggle screen on/off for listening to music / pocket use
-- **Menu Scripts**: Countdown Timer, Youtube audio and video (mpv-based), Weather, RSS
+- **Menu Scripts**: Web Search, Countdown Timer, Youtube audio and video (mpv-based), Weather, RSS
 - **Web browser**: (via [surf](http://git.sr.ht/~mil/sxmo-surf)) Browse the web while saving screenspace and includes Pinephone buttons (via dmenu) based link-following
 - **Terminal**: (via [st](http://git.sr.ht/~mil/sxmo-st)) Excellent terminal support with scrollback, copy-paste, and color invert
 - **Other Applications**: Prebaked images bundle foxtrotgps (GPS), sacc (Gopher client), Firefox and Netsurf (web browsers)
