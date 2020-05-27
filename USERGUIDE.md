@@ -102,6 +102,7 @@ in Sxmo. This menu lets you:
 - Make/Receive [Calls and Texts](#strongcalls-and-textingstrong)
 - Launch the Camera
 - Connect to Wifi
+- Adjust audio output device
 
 **3. Global config menu (Config)**
 
@@ -236,10 +237,13 @@ Mobile data should be manually for now (there is no built in menu to do this);
 so refer to [postmarketos](https://wiki.postmarketos.org/wiki/PINE64_PinePhone_(pine64-pinephone)#Modem) pinephone documentation for that aspect.
 
 ## **Audio Routing**
-At the time being audio is always routed through the headphone jack by default
-on boot.  When in a call, audio is routed to the earpiece and then changeable
-through the in call menu. Upon the call ending, audio is routed back to the
-headphone jack. In the future audio routing will likely be controllable through menus.
+You can use the Audio entry in the [global system menu](#strongincluded-menusstrong)
+to toggle which audio output you want to send sound to.
+
+Note that when in a call, the audio device selected in the global system menu
+won't automatically apply; rather audio will automatically be initially routed 
+to the earpiece and then changeable through the in call menu. Upon the call 
+ending, audio is always routed back to the headphone jack.
 
 ## **Resize SD Card Size**
 The images that our continuous integration system bakes won't automatically
