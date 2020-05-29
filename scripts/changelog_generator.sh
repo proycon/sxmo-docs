@@ -47,8 +47,7 @@ imageshistgen() {
     DATE=$(echo $imgmeta | cut -d^ -f2 | tr -d " ")
     TIME=$(echo $imgmeta | cut -d^ -f3 | tr -d " ")
 
-    echo -n "- **$VER:** "
-    FIRST=TRUE
+    echo "- **$VER:** "
     echo "$SOURCES" | while IFS= read -r sourcemeta ; do
       PRJ=$(echo $sourcemeta | cut -d^ -f1 | tr -d " ")
       cd $PRJ
@@ -60,12 +59,9 @@ imageshistgen() {
         cut -d: -f2 |
         tr -d ' '
       )"
-      echo $FIRST | grep TRUE > /dev/null || echo -n " / "
-      echo -n "$PRJ:$LATESTTAG"
-      FIRST=false
+      echo "  - $PRJ: $LATESTTAG"
       cd ../
     done
-    echo ""
   done
 }
 

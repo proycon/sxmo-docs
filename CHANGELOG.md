@@ -1,8 +1,29 @@
 # **Sxmo**: Simple X Mobile - *Changelog*
 ## Image Releases:
-- **0.1.2:** sxmo-utils:1.1.1 / sxmo-dwm:6.2.5 / sxmo-dmenu:4.9.2 / sxmo-st:0.8.3.3 / sxmo-surf:2.0.2 / sxmo-svkbd:1.0.4 / lisgd:0.0.2
-- **0.1.1:** sxmo-utils:1.1.0 / sxmo-dwm:6.2.4 / sxmo-dmenu:4.9.2 / sxmo-st:0.8.3.2 / sxmo-surf:2.0.2 / sxmo-svkbd:1.0.4 / lisgd:0.0.2
-- **0.1.0:** sxmo-utils:1.0.9 / sxmo-dwm:6.2.4 / sxmo-dmenu:4.9.2 / sxmo-st:0.8.3.2 / sxmo-surf:2.0.2 / sxmo-svkbd:1.0.4 / lisgd:0.0.2
+- **0.1.2:** 
+  - sxmo-utils: 1.1.1
+  - sxmo-dwm: 6.2.5
+  - sxmo-dmenu: 4.9.2
+  - sxmo-st: 0.8.3.3
+  - sxmo-surf: 2.0.2
+  - sxmo-svkbd: 1.0.4
+  - lisgd: 0.0.2
+- **0.1.1:** 
+  - sxmo-utils: 1.1.0
+  - sxmo-dwm: 6.2.4
+  - sxmo-dmenu: 4.9.2
+  - sxmo-st: 0.8.3.2
+  - sxmo-surf: 2.0.2
+  - sxmo-svkbd: 1.0.4
+  - lisgd: 0.0.2
+- **0.1.0:** 
+  - sxmo-utils: 1.0.9
+  - sxmo-dwm: 6.2.4
+  - sxmo-dmenu: 4.9.2
+  - sxmo-st: 0.8.3.2
+  - sxmo-surf: 2.0.2
+  - sxmo-svkbd: 1.0.4
+  - lisgd: 0.0.2
 
 ## Packages:
 ### sxmo-utils:
