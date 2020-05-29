@@ -30,7 +30,7 @@ cloneandiffgen() {
     echo "$TAGS" | while IFS= read -r TAG; do
       TAGPUBDATE="$(git log -1 --format=%aI $FUTURETAG)"
       echo "$FUTURETAG" | grep . >/dev/null && echo "#### $TAG -> $FUTURETAG (Published: $TAGPUBDATE)"
-      echo "$FUTURETAG" | grep . >/dev/null && git log --color=never $TAG..$FUTURETAG --abbrev-commit --pretty=format:"%h%x09%an: %s"
+      echo "$FUTURETAG" | grep . >/dev/null && git log --color=never $TAG..$FUTURETAG --abbrev-commit --pretty=format:"- %h%x09%an: %s"
       echo "$FUTURETAG" | grep . >/dev/null && echo -e "\n"
       FUTURETAG="$TAG"
     done
@@ -47,7 +47,7 @@ imageshistgen() {
     DATE=$(echo $imgmeta | cut -d^ -f2 | tr -d " ")
     TIME=$(echo $imgmeta | cut -d^ -f3 | tr -d " ")
 
-    echo -n "**$VER:** "
+    echo -n "- **$VER:** "
     FIRST=TRUE
     echo "$SOURCES" | while IFS= read -r sourcemeta ; do
       PRJ=$(echo $sourcemeta | cut -d^ -f1 | tr -d " ")
