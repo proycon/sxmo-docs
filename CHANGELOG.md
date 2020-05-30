@@ -166,6 +166,11 @@
 - 90f6878	Christopher Drelich: Function to cycle through available layouts.
 
 ### sxmo-dmenu:
+#### 4.9.3 -> 4.9.4 (Published: 2020-05-29T18:59:12-05:00)
+- 22b5776	Miles Alan: Make scroll patch compatible with numbers patch
+- d39b668	Miles Alan: Fix scroll patch alignment in horizontal mode
+- 7e3b698	Miles Alan: Apply scroll patch: https://tools.suckless.org/dmenu/patches/scroll/
+
 #### 4.9.2 -> 4.9.3 (Published: 2020-05-26T16:47:44-05:00)
 - 431dc8c	Miles Alan: If the numer/denom are equal only print single number in recalculatenumbers
 
