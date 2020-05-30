@@ -17,6 +17,7 @@
 - [Wifi](#strongwifistrong)
 - [Audio Routing](#strongaudio-routingstrong)
 - [Resize SD Card Size](#strongresize-sd-card-sizestrong)
+- [Updating and Changelog](#strongupdating-and-changelogstrong)
 
 ## **Global UI Controls**
 
@@ -255,3 +256,21 @@ you can run from another computer with your the Sxmo SD card mounted as `mmcblk1
 echo -e "d\n2\nn\np\n\n\n\nw" | fdisk /dev/mmcblk1
 resize2fs /dev/mmcblk1p2
 ```
+
+## **Updating and Changelog**
+Sxmo's packages are currently distributed through an Alpine repository so
+when new package versions are periodically pushed; your install can be 
+updated through standard mechanisms using `apk`.
+
+To update run:
+
+```
+apk update
+apk upgrade
+```
+
+There is also a menu entry within the [Config menu](#strongincluded-menusstrong)
+to update as well which runs the same commands as above.
+
+For details on what changed between package versions or image releases
+refer to [the changelog](https://git.sr.ht/~mil/sxmo-docs/tree/master/CHANGELOG.md).
