@@ -1,5 +1,13 @@
 # **Sxmo**: Simple X Mobile - *Changelog*
 ## Image Releases:
+- **0.1.3:** 
+  - sxmo-utils: 1.1.3
+  - sxmo-dwm: 6.2.6
+  - sxmo-dmenu: 4.9.4
+  - sxmo-st: 0.8.3.3
+  - sxmo-surf: 2.0.2
+  - sxmo-svkbd: 1.0.4
+  - lisgd: 0.0.2
 - **0.1.2:** 
   - sxmo-utils: 1.1.1
   - sxmo-dwm: 6.2.5
@@ -27,6 +35,13 @@
 
 ## Packages:
 ### sxmo-utils:
+#### 1.1.2 -> 1.1.3 (Published: 2020-05-30T15:01:07-05:00)
+- b3804ad	Miles Alan: Disable lisgd before locking screen in call script
+- ff5f92c	Anjandev Momi: xinit: set touch env variable=1 for firefox
+- 0cdf6e4	Miles Alan: Rework notifications to only use dunst
+- 9a16998	Miles Alan: Rework timer script and timezone script to use $# checking/recursive call trick
+- e842460	Miles Alan: Add script to allow user to change timezone from the config menu
+
 #### 1.1.1 -> 1.1.2 (Published: 2020-05-26T19:00:42-05:00)
 - 35a432d	Miles Alan: Copy to xsel instead of xclip in urlhandler.sh
 - da0b5cc	Miles Alan: Make bar come in quickly upon logging in rather than waiting
@@ -108,6 +123,11 @@
 - 309ba56	Miles Alan: Autoenable dmix by adding basic dmix conf to /etc/asound.conf
 
 ### sxmo-dwm:
+#### 6.2.5 -> 6.2.6 (Published: 2020-05-30T15:09:50-05:00)
+- 5adf679	Miles Alan: Delete dead code
+- 56785cf	Miles Alan: Kill lisgd before starting screenlock and then start it back up after exiting
+- e03e6d4	Miles Alan: Remove project-specific .build.yml
+
 #### 6.2.4 -> 6.2.5 (Published: 2020-05-25T00:58:42-05:00)
 - 32560e9	Miles Alan: Add fakefullscreen patch https://dwm.suckless.org/patches/fakefullscreen/
 
