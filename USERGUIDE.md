@@ -137,10 +137,6 @@ While using the Screenlock, only the following bindings apply
 - **Powerkey**:
   - **3 taps**: Exit screen lock
 
-Currently there *is* a bug wherein the [lisgd](http://git.sr.ht/~mil/lisgd) swipe 
-gestures are still recognized while using the screenlock; however this should
-be sorted out in a future release.
-
 
 ## **Calls and Texting**
 Calling and texting is fully functional and should work out-of-the-box. Make
