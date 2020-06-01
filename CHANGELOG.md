@@ -1,5 +1,13 @@
 # **Sxmo**: Simple X Mobile - *Changelog*
 ## Image Releases:
+- **0.1.4:** 
+  - sxmo-utils: 1.1.4
+  - sxmo-dwm: 6.2.6
+  - sxmo-dmenu: 4.9.4
+  - sxmo-st: 0.8.3.3
+  - sxmo-surf: 2.0.2
+  - sxmo-svkbd: 1.0.4
+  - lisgd: 0.0.3
 - **0.1.3:** 
   - sxmo-utils: 1.1.3
   - sxmo-dwm: 6.2.6
@@ -35,6 +43,11 @@
 
 ## Packages:
 ### sxmo-utils:
+#### 1.1.3 -> 1.1.4 (Published: 2020-06-01T17:56:13-05:00)
+- 6d0f282	Miles Alan: Use default lisgd threshold always
+- 2002565	Miles Alan: youtube-cli instead of idiotbox-cli per codemadess-frontends
+- 6e9c5ee	Miles Alan: Kill old instance of lisgd on xinit
+
 #### 1.1.2 -> 1.1.3 (Published: 2020-05-30T15:01:07-05:00)
 - b3804ad	Miles Alan: Disable lisgd before locking screen in call script
 - ff5f92c	Anjandev Momi: xinit: set touch env variable=1 for firefox
@@ -260,6 +273,12 @@
 - fbdfb49	Miles Alan: Bump up height of keyboard
 
 ### lisgd:
+#### 0.0.2 -> 0.0.3 (Published: 2020-06-01T17:37:10-05:00)
+- 877beea	Miles Alan: Fix bug where on booting end position x/y = 0/0 causing improper LR gesture
+- becf4f2	Miles Alan: Improve gestures commandline flag documentation examples
+- 65be0a7	Miles Alan: Fix README documentation typo for gestures
+- 8acb43e	Miles Alan: Fix typo in documentation commandline example
+
 #### 0.0.1 -> 0.0.2 (Published: 2020-04-29T20:25:32-05:00)
 - 12e9a9f	Miles Alan: Change default bindings
 - 77e3569	Miles Alan: README cleanup
