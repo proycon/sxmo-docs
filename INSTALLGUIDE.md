@@ -21,6 +21,16 @@ images under the hood are based on [postmarketOS](http://postmarketos.org).
 4. Pop the SD card into your Pinephone and see the [Userguide](https://git.sr.ht/~mil/sxmo-docs/tree/master/USERGUIDE.md)
 5. Please note, the default username/password combination is: `mo`/`mo`
 
+## Installing Using pmbootstrap
+
+If you would like to use full disk encryption on your phone, you must install sxmo with [pmbootstrap](https://gitlab.com/postmarketOS/pmbootstrap).
+
+1. Run `pmbootstrap init` on your host machine and specify the config according to your needs but make sure you choose "none" as your ui
+2. Boot up your phone post install, you should see a login prompt (TTY) when your phone is ready to be accessed via ssh.
+3. Connect your phone to your PC via USB and run `ssh <YOUR-USERNAME>@172.16.42.1`. **Note: If you are unable to ssh into your phone, follow [postmarketos' troubleshooting instructions](https://wiki.postmarketos.org/wiki/USB_Network)**
+4. Follow [postmarketOS' USB Internet instructions](https://wiki.postmarketos.org/wiki/USB_Internet) to enable internet connectivity for your device.
+5. Follow the instructions listed in **Using the Packages for Alpine Linux** (use a pre-existing pmOS install)) section below to install sxmo onto your minimal postmarketOS install
+
 ## **Using the Packages for Alpine Linux** (use a pre-existing pmOS install)
 
 If you don't want to use a prebaked image or already have a barebones Alpine or pmOS install, 
