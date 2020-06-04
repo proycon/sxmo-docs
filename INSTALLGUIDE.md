@@ -23,17 +23,16 @@ images under the hood are based on [postmarketOS](http://postmarketos.org).
 
 ## **Alternative: Using the Packages for Alpine Linux** (new or existing pmOS install)
 
-**First**, if you don't already have a pmOS install, to setup a base install:
+If you'd like to setup full-disk encryption or want to customize your install further then the prebaked images can provide, you use an existing or setup a new pmOS install and then just add the Sxmo Alpine repository.
 
-1. Download and install [pmbootstrap](https://gitlab.com/postmarketOS/pmbootstrap)
-2. Run `pmbootstrap init` on your host machine and specify the config according to your needs but make sure you choose "none" as your ui
-3. Boot up your phone post install, you should see a login prompt (TTY) when your phone is ready to be accessed via ssh
-4. Connect your phone to your PC via USB and run `ssh <YOUR-USERNAME>@172.16.42.1`. **Note: If you are unable to ssh into your phone, follow [postmarketos' troubleshooting instructions](https://wiki.postmarketos.org/wiki/USB_Network)**
-5. Follow [postmarketOS' USB Internet instructions](https://wiki.postmarketos.org/wiki/USB_Internet) to enable internet connectivity for your device
-
-**Next**, to install Sxmo, you just need to add our repository and install the single `sxmo-ui` metapackage, this can be done like:
-
-- `echo "http://sxmo.lrdu.org/alpine_repository/master" >> /etc/apk/repositories`
-- `wget "https://git.sr.ht/~mil/sxmo-image-builder/blob/master/m%40milesalan.com-5e6e8e01.rsa.pub" -O "/etc/apk/keys/m@milesalan.com-5e6e8e01.rsa.pub"`
-- `apk update`
-- `apk add sxmo-ui`
+- **First**, if you don't already have a pmOS install, to setup a base install:
+  1. Download and install [pmbootstrap](https://gitlab.com/postmarketOS/pmbootstrap)
+  2. Run `pmbootstrap init` on your host machine and specify the config according to your needs but make sure you choose "none" as your ui
+  3. Boot up your phone post install, you should see a login prompt (TTY) when your phone is ready to be accessed via ssh
+  4. Connect your phone to your PC via USB and run `ssh <YOUR-USERNAME>@172.16.42.1`. **Note: If you are unable to ssh into your phone, follow [postmarketos' troubleshooting instructions](https://wiki.postmarketos.org/wiki/USB_Network)**
+  5. Follow [postmarketOS' USB Internet instructions](https://wiki.postmarketos.org/wiki/USB_Internet) to enable internet connectivity for your device
+- **Next**, to install Sxmo, you just need to add our repository and install the single `sxmo-ui` metapackage, this can be done like:
+  1. `echo "http://sxmo.lrdu.org/alpine_repository/master" >> /etc/apk/repositories`
+  2. `wget "https://git.sr.ht/~mil/sxmo-image-builder/blob/master/m%40milesalan.com-5e6e8e01.rsa.pub" -O "/etc/apk/keys/m@milesalan.com-5e6e8e01.rsa.pub"`
+  3. `apk update`
+  4. `apk add sxmo-ui`
