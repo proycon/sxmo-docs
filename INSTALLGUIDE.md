@@ -38,9 +38,7 @@ dependencies.
 
 **Next**, to install `sxmo-ui` on your existing pmOS install run:
 
-```
-echo "http://sxmo.lrdu.org/alpine_repository/master" >> /etc/apk/repositories
-wget "https://git.sr.ht/~mil/sxmo-image-builder/blob/master/m%40milesalan.com-5e6e8e01.rsa.pub" -O "/etc/apk/keys/m@milesalan.com-5e6e8e01.rsa.pub"
-apk update
-apk add sxmo-ui
-```
+- `echo "http://sxmo.lrdu.org/alpine_repository/master" >> /etc/apk/repositories`
+- `wget "https://git.sr.ht/~mil/sxmo-image-builder/blob/master/m%40milesalan.com-5e6e8e01.rsa.pub" -O "/etc/apk/keys/m@milesalan.com-5e6e8e01.rsa.pub"`
+- `apk update`
+- `apk add sxmo-ui`
