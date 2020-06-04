@@ -23,13 +23,13 @@ images under the hood are based on [postmarketOS](http://postmarketos.org).
 
 ## Installing Using pmbootstrap
 
-If you would like to use full disk encryption on your phone, you must install sxmo with [pmbootstrap](https://gitlab.com/postmarketOS/pmbootstrap).
+If you would like to use full disk encryption on your phone, or wish to customize your install further than the prebaked images provide; you can install Sxmo using [pmbootstrap](https://gitlab.com/postmarketOS/pmbootstrap).
 
 1. Run `pmbootstrap init` on your host machine and specify the config according to your needs but make sure you choose "none" as your ui
-2. Boot up your phone post install, you should see a login prompt (TTY) when your phone is ready to be accessed via ssh.
+2. Boot up your phone post install, you should see a login prompt (TTY) when your phone is ready to be accessed via ssh
 3. Connect your phone to your PC via USB and run `ssh <YOUR-USERNAME>@172.16.42.1`. **Note: If you are unable to ssh into your phone, follow [postmarketos' troubleshooting instructions](https://wiki.postmarketos.org/wiki/USB_Network)**
-4. Follow [postmarketOS' USB Internet instructions](https://wiki.postmarketos.org/wiki/USB_Internet) to enable internet connectivity for your device.
-5. Follow the instructions listed in **Using the Packages for Alpine Linux** (use a pre-existing pmOS install)) section below to install sxmo onto your minimal postmarketOS install
+4. Follow [postmarketOS' USB Internet instructions](https://wiki.postmarketos.org/wiki/USB_Internet) to enable internet connectivity for your device
+5. Follow the instructions listed in **Using the Packages for Alpine Linux** (use a pre-existing pmOS install)) section below to install Sxmo onto your minimal postmarketOS install
 
 ## **Using the Packages for Alpine Linux** (use a pre-existing pmOS install)
 
