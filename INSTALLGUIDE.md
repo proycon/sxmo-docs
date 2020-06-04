@@ -21,16 +21,6 @@ images under the hood are based on [postmarketOS](http://postmarketos.org).
 4. Pop the SD card into your Pinephone and see the [Userguide](https://git.sr.ht/~mil/sxmo-docs/tree/master/USERGUIDE.md)
 5. Please note, the default username/password combination is: `mo`/`mo`
 
-## Installing Using pmbootstrap
-
-If you would like to use full disk encryption on your phone, or wish to customize your install further than the prebaked images provide; you can install Sxmo using [pmbootstrap](https://gitlab.com/postmarketOS/pmbootstrap).
-
-1. Run `pmbootstrap init` on your host machine and specify the config according to your needs but make sure you choose "none" as your ui
-2. Boot up your phone post install, you should see a login prompt (TTY) when your phone is ready to be accessed via ssh
-3. Connect your phone to your PC via USB and run `ssh <YOUR-USERNAME>@172.16.42.1`. **Note: If you are unable to ssh into your phone, follow [postmarketos' troubleshooting instructions](https://wiki.postmarketos.org/wiki/USB_Network)**
-4. Follow [postmarketOS' USB Internet instructions](https://wiki.postmarketos.org/wiki/USB_Internet) to enable internet connectivity for your device
-5. Follow the instructions listed in **Using the Packages for Alpine Linux** (use a pre-existing pmOS install)) section below to install Sxmo onto your minimal postmarketOS install
-
 ## **Using the Packages for Alpine Linux** (use a pre-existing pmOS install)
 
 If you don't want to use a prebaked image or already have a barebones Alpine or pmOS install, 
@@ -38,7 +28,15 @@ you can instead use the `sxmo-ui` package from our alpine repository directly. A
 meta-package `sxmo-ui` is responsible for installing all of Sxmo's subpackages and required
 dependencies.
 
-The install process for an existing Alpine or pmOS install looks like:
+**First: To setup a base pmOS install:**
+1. Download and install [pmbootstrap](https://gitlab.com/postmarketOS/pmbootstrap)
+1. Run `pmbootstrap init` on your host machine and specify the config according to your needs but make sure you choose "none" as your ui
+2. Boot up your phone post install, you should see a login prompt (TTY) when your phone is ready to be accessed via ssh
+3. Connect your phone to your PC via USB and run `ssh <YOUR-USERNAME>@172.16.42.1`. **Note: If you are unable to ssh into your phone, follow [postmarketos' troubleshooting instructions](https://wiki.postmarketos.org/wiki/USB_Network)**
+4. Follow [postmarketOS' USB Internet instructions](https://wiki.postmarketos.org/wiki/USB_Internet) to enable internet connectivity for your device
+
+**Next: Once you have pmOS installed on your device:**
+The install process for adding Sxmo to your existing Alpine or pmOS install looks like:
 
 ```
 echo "http://sxmo.lrdu.org/alpine_repository/master" >> /etc/apk/repositories
