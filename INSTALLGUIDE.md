@@ -37,6 +37,7 @@ dependencies.
 5. Follow [postmarketOS' USB Internet instructions](https://wiki.postmarketos.org/wiki/USB_Internet) to enable internet connectivity for your device
 
 **Next: Once you have pmOS installed on your device:**
+
 The install process for adding Sxmo to your existing Alpine or pmOS install looks like:
 
 ```
