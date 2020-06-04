@@ -29,11 +29,12 @@ meta-package `sxmo-ui` is responsible for installing all of Sxmo's subpackages a
 dependencies.
 
 **First: To setup a base pmOS install:**
+
 1. Download and install [pmbootstrap](https://gitlab.com/postmarketOS/pmbootstrap)
-1. Run `pmbootstrap init` on your host machine and specify the config according to your needs but make sure you choose "none" as your ui
-2. Boot up your phone post install, you should see a login prompt (TTY) when your phone is ready to be accessed via ssh
-3. Connect your phone to your PC via USB and run `ssh <YOUR-USERNAME>@172.16.42.1`. **Note: If you are unable to ssh into your phone, follow [postmarketos' troubleshooting instructions](https://wiki.postmarketos.org/wiki/USB_Network)**
-4. Follow [postmarketOS' USB Internet instructions](https://wiki.postmarketos.org/wiki/USB_Internet) to enable internet connectivity for your device
+2. Run `pmbootstrap init` on your host machine and specify the config according to your needs but make sure you choose "none" as your ui
+3. Boot up your phone post install, you should see a login prompt (TTY) when your phone is ready to be accessed via ssh
+4. Connect your phone to your PC via USB and run `ssh <YOUR-USERNAME>@172.16.42.1`. **Note: If you are unable to ssh into your phone, follow [postmarketos' troubleshooting instructions](https://wiki.postmarketos.org/wiki/USB_Network)**
+5. Follow [postmarketOS' USB Internet instructions](https://wiki.postmarketos.org/wiki/USB_Internet) to enable internet connectivity for your device
 
 **Next: Once you have pmOS installed on your device:**
 The install process for adding Sxmo to your existing Alpine or pmOS install looks like:
