@@ -6,6 +6,9 @@
 
 ---
 
+There are two options for installing Sxmo, you can either use a prebaked image
+or use you can use an existing (or setup a new pmOS) install.
+
 ## **Prebaked Images**
 
 The easiest way to get started using Sxmo is just to grab a prebaked image from our image release page.
@@ -21,14 +24,14 @@ images under the hood are based on [postmarketOS](http://postmarketos.org).
 4. Pop the SD card into your Pinephone and see the [Userguide](https://git.sr.ht/~mil/sxmo-docs/tree/master/USERGUIDE.md)
 5. Please note, the default username/password combination is: `mo`/`mo`
 
-## **Alternative: Using the Packages for Alpine Linux** (use a pre-existing pmOS install)
+## **Alternative: Using the Packages for Alpine Linux** (via a new or existing pmOS install)
 
 If you don't want to use a prebaked image or already have a barebones Alpine or pmOS install, 
 you can instead use the `sxmo-ui` package from our alpine repository directly. A single 
 meta-package `sxmo-ui` is responsible for installing all of Sxmo's subpackages and required
 dependencies.
 
-**First**, to setup a base pmOS install:
+**First**, if you don't already have a pmOS install, to setup a base install:
 
 1. Download and install [pmbootstrap](https://gitlab.com/postmarketOS/pmbootstrap)
 2. Run `pmbootstrap init` on your host machine and specify the config according to your needs but make sure you choose "none" as your ui
