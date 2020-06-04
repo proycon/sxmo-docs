@@ -23,7 +23,9 @@ images under the hood are based on [postmarketOS](http://postmarketos.org).
 
 ## **Alternative: Using the Packages for Alpine Linux** (new or existing pmOS install)
 
-If you'd like to setup full-disk encryption or want to customize your install further then the prebaked images can provide, you use an existing or setup a new pmOS install and then just add the Sxmo Alpine repository.
+If you'd like to setup full-disk encryption or want to customize your install further then the prebaked images can provide, you can use an existing or setup a new pmOS install and then just add the Sxmo Alpine repository.
+
+**Install Steps:**
 
 - **First**, if you don't already have a pmOS install, to setup a base install:
   1. Download and install [pmbootstrap](https://gitlab.com/postmarketOS/pmbootstrap)
