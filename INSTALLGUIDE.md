@@ -23,11 +23,6 @@ images under the hood are based on [postmarketOS](http://postmarketos.org).
 
 ## **Alternative: Using the Packages for Alpine Linux** (new or existing pmOS install)
 
-If you don't want to use a prebaked image or already have a barebones Alpine or pmOS install, 
-you can instead use the `sxmo-ui` package from our alpine repository directly. A single 
-meta-package `sxmo-ui` is responsible for installing all of Sxmo's subpackages and required
-dependencies.
-
 **First**, if you don't already have a pmOS install, to setup a base install:
 
 1. Download and install [pmbootstrap](https://gitlab.com/postmarketOS/pmbootstrap)
@@ -36,7 +31,7 @@ dependencies.
 4. Connect your phone to your PC via USB and run `ssh <YOUR-USERNAME>@172.16.42.1`. **Note: If you are unable to ssh into your phone, follow [postmarketos' troubleshooting instructions](https://wiki.postmarketos.org/wiki/USB_Network)**
 5. Follow [postmarketOS' USB Internet instructions](https://wiki.postmarketos.org/wiki/USB_Internet) to enable internet connectivity for your device
 
-**Next**, to install `sxmo-ui` on your existing pmOS install run:
+**Next**, to install Sxmo, you just need to add our repository and install the single `sxmo-ui` metapackage, this can be done like:
 
 - `echo "http://sxmo.lrdu.org/alpine_repository/master" >> /etc/apk/repositories`
 - `wget "https://git.sr.ht/~mil/sxmo-image-builder/blob/master/m%40milesalan.com-5e6e8e01.rsa.pub" -O "/etc/apk/keys/m@milesalan.com-5e6e8e01.rsa.pub"`
