@@ -1,5 +1,13 @@
 # **Sxmo**: Simple X Mobile - *Changelog*
 ## Image Releases:
+- **0.1.5:** 
+  - sxmo-utils: 1.1.5
+  - sxmo-dwm: 6.2.6
+  - sxmo-dmenu: 4.9.4
+  - sxmo-st: 0.8.3.3
+  - sxmo-surf: 2.0.2
+  - sxmo-svkbd: 1.0.4
+  - lisgd: 0.0.3
 - **0.1.4:** 
   - sxmo-utils: 1.1.4
   - sxmo-dwm: 6.2.6
@@ -43,6 +51,19 @@
 
 ## Packages:
 ### sxmo-utils:
+#### 1.1.4 -> 1.1.5 (Published: 2020-06-07T20:44:03-05:00)
+- 41e2e31	Miles Alan: Fix bug with files script
+- 8015d49	Miles Alan: Run $XDG_CONFIG_HOME/sxmo/xinit if it exists on starting X
+- 6a432b3	Miles Alan: Shellcheck a few core scripts
+- 1c8efb9	Miles Alan: Add shellcheck task to Makefile
+- f9e5801	Miles Alan: Shellcheck and tabindent all appscripts
+- e23f439	Miles Alan: Minor style cleanups in userscripts implementation
+- 933ef2b	Anjandev Momi: appmenu: added support for user scripts in $XDG_CONFIG_HOME/sxmo/userscripts
+- 1b78c3c	Anjandev Momi: modem: use XDG_CONFIG_HOME to save logs
+- 66eeb46	Miles Alan: Fix bug - dialer launches into screenlock upon starting call
+- 41714c8	Miles Alan: Attempt to fix screenlock - only show led after screen is already locked
+- 8ebf11f	Miles Alan: Add files script
+
 #### 1.1.3 -> 1.1.4 (Published: 2020-06-01T17:56:13-05:00)
 - 6d0f282	Miles Alan: Use default lisgd threshold always
 - 2002565	Miles Alan: youtube-cli instead of idiotbox-cli per codemadess-frontends
