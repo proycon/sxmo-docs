@@ -11,6 +11,7 @@
 - [Global UI Controls](#strongglobal-ui-controlsstrong)
 - [The Menu System](#strongthe-menu-systemstrong)
 - [Included Menus](#strongincluded-menusstrong)
+- [User Customizable Functionality](#stronguser-customizable-functionalitystrong)
 - [Screenlock](#strongscreen-lockstrong)
 - [Calls and Texting](#strongcalls-and-textingstrong)
 - [Included Scripts and Applications](#strongincluded-scripts-and-applicationsstrong)
@@ -115,6 +116,38 @@ aforementioned and selecting *Config*. This menu let you:
 - Rotate the screen rotation
 - Upgrade packages
 
+## **User Customizable Functionality**
+
+Throughout this section, we refer to `$XDG_CONFIG_HOME`.
+By default, `$XDG_CONFIG_HOME=~/.config`.
+
+### User Scripts
+
+User scripts are custom scripts the user can run via the appmenu.
+To run your own custom user script, create the `$XDG_CONFIG_HOME/sxmo/userscripts` directory and place your `.sh` scripts in the `userscripts` directory.
+If the `userscripts` folder is populated with at least one script, a new menu item called `Userscripts` will appear in the `sxmo_appmenu`.
+
+For examples of scripts sxmo users have made for their mobile devices, see: [~anjan/sxmo-userscripts](https://git.sr.ht/~anjan/sxmo-userscripts).
+
+### Custom xinit
+
+To set the wallpaper, launch programs, or run `sxmo_*.sh` at login - create a script at `$XDG_CONFIG_HOME/sxmo/xinit`.
+Make sure the user has permission to execute this file.
+
+For example, to set a wallpaper, I installed [feh](https://feh.finalrewind.org/), copied a wallpaper to `$XDG_CONFIG_HOME/sxmo/wall.jpg`, and added the following to `$XDG_CONFIG_HOME/sxmo/xinit`:
+
+```sh
+#!/bin/sh
+feh --bg-fill -z $XDG_CONFIG_HOME/sxmo/wall.jpg
+```
+### Customize Default Appmenu Buttons' Function
+
+You can copy sxmo's modem, text, rss, files etc. [scripts](https://git.sr.ht/~mil/sxmo-utils/tree/master/scripts)) to a custom folder (ie. `~/bin/`) and modify them to your needs.
+To override the default function of the buttons in the appmenu, prepend this custom scripts folder to your `$PATH`, make sure the user has execution permission on the script, and ensure the name of the script is the same as the default script's name.
+
+This could allow you to change the default program (currently mpv) for `*.mp3` files when running `sxmo_files.sh` via `sxmo_appmenu.sh`.
+
+Consider [contributing](https://git.sr.ht/~mil/sxmo-docs/tree/master/CONTRIBUTING.md) if you believe your modifications may be useful to other users.
 
 ## **Screen Lock**
 A custom application ([sxmo_screenlock](https://git.sr.ht/~mil/sxmo-utils/tree/master/programs/sxmo_screenlock.c)) enables you to lock the screen
