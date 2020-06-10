@@ -276,14 +276,16 @@ refer to [the changelog](https://git.sr.ht/~mil/sxmo-docs/tree/master/CHANGELOG.
 ## **User Customizable Functionality**
 Sxmo's default scripts are built in a way such that certain features are user-customizable. The `$XDG_CONFIG_HOME`/sxmo directory is where user data and user-customizable scripts live. Note, by default, `$XDG_CONFIG_HOME=~/.config` so the default config directory for Sxmo is `~/.config/sxmo`.
 
-### User Scripts
+**User Scripts**
+
 User scripts are custom scripts the user can run via the [global system menu](#strongincluded-menusstrong). To add your own custom userscript, create the `$XDG_CONFIG_HOME/sxmo/userscripts` directory and place your `.sh` scripts in the `userscripts` directory. If the `userscripts` folder is populated with atleast one script, a new menu item called `Userscripts` will appear in the [global system menu](#strongincluded-menusstrong). Note, Userscripts should be set to be executable.
 
 For examples of scripts Sxmo users have made for their mobile devices, see: 
 
 - [~anjan/sxmo-userscripts](https://git.sr.ht/~anjan/sxmo-userscripts).
 
-### Custom xinit
+**Custom xinit**
+
 Because you might want to have control over what's running in the X session, we allow for a custom user xinit to be run on starting X after logging into XDM. The user xinit script is located at `$XDG_CONFIG_HOME/sxmo/xinit`.
 
 One good example of where this xinit functionality might be helpful is for setting your wallpaper. You can use [feh](https://feh.finalrewind.org/) to set your wallpaper. Below is an example of setting your wallpaper to `$XDG_CONFIG_HOME/sxmo/wall.jpg`. Simply create a new executable file at `$XDG_CONFIG_HOME/sxmo/xinit` with the contents:
@@ -293,5 +295,6 @@ One good example of where this xinit functionality might be helpful is for setti
 feh --bg-fill -z $XDG_CONFIG_HOME/sxmo/wall.jpg
 ```
 
-### Further Customization
+**Further Customization**
+
 Much of Sxmo's core-functionality in regards to menus are built out via plain shell scripts. So further cutomization should be simple. See sxmo-util's [scripts directory](https://git.sr.ht/~mil/sxmo-utils/tree/master/scripts)) to get a better sense of how things are put together. You can edit the scripts on your system for temporary fixes and please consider [contributing](https://git.sr.ht/~mil/sxmo-docs/tree/master/CONTRIBUTING.md) your changes if you believe your modifications may be useful to other users.
