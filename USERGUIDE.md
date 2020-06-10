@@ -11,7 +11,6 @@
 - [Global UI Controls](#strongglobal-ui-controlsstrong)
 - [The Menu System](#strongthe-menu-systemstrong)
 - [Included Menus](#strongincluded-menusstrong)
-- [User Customizable Functionality](#stronguser-customizable-functionalitystrong)
 - [Screenlock](#strongscreen-lockstrong)
 - [Calls and Texting](#strongcalls-and-textingstrong)
 - [Included Scripts and Applications](#strongincluded-scripts-and-applicationsstrong)
@@ -19,6 +18,7 @@
 - [Audio Routing](#strongaudio-routingstrong)
 - [Resize SD Card Size](#strongresize-sd-card-sizestrong)
 - [Updating and Changelog](#strongupdating-and-changelogstrong)
+- [User Customizable Functionality](#stronguser-customizable-functionalitystrong)
 
 ## **Global UI Controls**
 
@@ -116,38 +116,6 @@ aforementioned and selecting *Config*. This menu let you:
 - Rotate the screen rotation
 - Upgrade packages
 
-## **User Customizable Functionality**
-
-Throughout this section, we refer to `$XDG_CONFIG_HOME`.
-By default, `$XDG_CONFIG_HOME=~/.config`.
-
-### User Scripts
-
-User scripts are custom scripts the user can run via the appmenu.
-To run your own custom user script, create the `$XDG_CONFIG_HOME/sxmo/userscripts` directory and place your `.sh` scripts in the `userscripts` directory.
-If the `userscripts` folder is populated with at least one script, a new menu item called `Userscripts` will appear in the `sxmo_appmenu`.
-
-For examples of scripts sxmo users have made for their mobile devices, see: [~anjan/sxmo-userscripts](https://git.sr.ht/~anjan/sxmo-userscripts).
-
-### Custom xinit
-
-To set the wallpaper, launch programs, or run `sxmo_*.sh` at login - create a script at `$XDG_CONFIG_HOME/sxmo/xinit`.
-Make sure the user has permission to execute this file.
-
-For example, to set a wallpaper, I installed [feh](https://feh.finalrewind.org/), copied a wallpaper to `$XDG_CONFIG_HOME/sxmo/wall.jpg`, and added the following to `$XDG_CONFIG_HOME/sxmo/xinit`:
-
-```sh
-#!/bin/sh
-feh --bg-fill -z $XDG_CONFIG_HOME/sxmo/wall.jpg
-```
-### Customize Default Appmenu Buttons' Function
-
-You can copy sxmo's modem, text, rss, files etc. [scripts](https://git.sr.ht/~mil/sxmo-utils/tree/master/scripts)) to a custom folder (ie. `~/bin/`) and modify them to your needs.
-To override the default function of the buttons in the appmenu, prepend this custom scripts folder to your `$PATH`, make sure the user has execution permission on the script, and ensure the name of the script is the same as the default script's name.
-
-This could allow you to change the default program (currently mpv) for `*.mp3` files when running `sxmo_files.sh` via `sxmo_appmenu.sh`.
-
-Consider [contributing](https://git.sr.ht/~mil/sxmo-docs/tree/master/CONTRIBUTING.md) if you believe your modifications may be useful to other users.
 
 ## **Screen Lock**
 A custom application ([sxmo_screenlock](https://git.sr.ht/~mil/sxmo-utils/tree/master/programs/sxmo_screenlock.c)) enables you to lock the screen
@@ -240,6 +208,7 @@ scripts.
 **Included Scripts:**
 
 - **Web Search**: Search duckduckgo with the query provided by the user (bangs work too)
+- **Files**: A filebrowser that can handle opening audio and text files
 - **Timer**: A simple countdown timer script that vibrates the phones upon completion
 - **Youtube**: Search youtube by keyword in dmenu and then view in mpv (script based on [idiotbox](https://codemadness.org/idiotbox.html))
 - **Youtube (audio)**: Search youtube by keyword in dmenu and then listen in mpv (script based on [idiotbox](https://codemadness.org/idiotbox.html))
@@ -303,3 +272,26 @@ to update as well which runs the same commands as above.
 
 For details on what changed between package versions or image releases
 refer to [the changelog](https://git.sr.ht/~mil/sxmo-docs/tree/master/CHANGELOG.md).
+
+## **User Customizable Functionality**
+Sxmo's default scripts are built in a way such that certain features are user-customizable. The `$XDG_CONFIG_HOME`/sxmo directory is where user data and user-customizable scripts live. Note, by default, `$XDG_CONFIG_HOME=~/.config` so the default config directory for Sxmo is `~/.config/sxmo`.
+
+### User Scripts
+User scripts are custom scripts the user can run via the [global system menu](#strongincluded-menusstrong). To add your own custom userscript, create the `$XDG_CONFIG_HOME/sxmo/userscripts` directory and place your `.sh` scripts in the `userscripts` directory. If the `userscripts` folder is populated with atleast one script, a new menu item called `Userscripts` will appear in the [global system menu](#strongincluded-menusstrong). Note, Userscripts should be set to be executable.
+
+For examples of scripts Sxmo users have made for their mobile devices, see: 
+
+- [~anjan/sxmo-userscripts](https://git.sr.ht/~anjan/sxmo-userscripts).
+
+### Custom xinit
+Because you might want to have control over what's running in the X session, we allow for a custom user xinit to be run on starting X after logging into XDM. The user xinit script is located at `$XDG_CONFIG_HOME/sxmo/xinit`.
+
+One good example of where this xinit functionality might be helpful is for setting your wallpaper. You can use [feh](https://feh.finalrewind.org/) to set your wallpaper. Below is an example of setting your wallpaper to `$XDG_CONFIG_HOME/sxmo/wall.jpg`. Simply create a new executable file at `$XDG_CONFIG_HOME/sxmo/xinit` with the contents:
+
+```sh
+#!/usr/bin/env sh
+feh --bg-fill -z $XDG_CONFIG_HOME/sxmo/wall.jpg
+```
+
+### Further Customization
+Much of Sxmo's core-functionality in regards to menus are built out via plain shell scripts. So further cutomization should be simple. See sxmo-util's [scripts directory](https://git.sr.ht/~mil/sxmo-utils/tree/master/scripts)) to get a better sense of how things are put together. You can edit the scripts on your system for temporary fixes and please consider [contributing](https://git.sr.ht/~mil/sxmo-docs/tree/master/CONTRIBUTING.md) your changes if you believe your modifications may be useful to other users.
