@@ -56,14 +56,18 @@ Wherein L=left, R=right, D=down, U=up, the default swipe gestures are:
 
   - **1 finger R-to-L**: Focus next tag
   - **1 finger L-to-R**: Focus previous tag
+  - **1 finger LD-to-RU**: Increase volume
+  - **1 finger RU-to-LD**: Decrease volume
+  - **1 finger RD-to-LU**: Increase brightness
+  - **1 finger LU-to-RD**: Decrease brightness
   - **2 fingers R-to-L**: Move focused application to next tag
   - **2 fingers L-to-R**: Move focused application to previous tag
   - **2 fingers D-to-U**: Launch onscreen keyboard, svkbd
   - **2 fingers U-to-D**: Close onscreen keyboard, svkbd
-  - **3 fingers U-to-D**: Increase volume
-  - **3 fingers D-to-U**: Decrease volume
-  - **4 fingers U-to-D**: Increase brightness
-  - **4 fingers D-to-U**: Decrease brightness
+
+Note, earlier versions of Sxmo based on lisgd prior to version 0.1 used 3 and
+four finger gestures; please update to get the up-to-date gestures mentioned
+above.
 
 ## **The Menu System**
 
@@ -297,4 +301,4 @@ feh --bg-fill -z $XDG_CONFIG_HOME/sxmo/wall.jpg
 
 **Further Customization**
 
-Much of Sxmo's core-functionality in regards to menus are built out via plain shell scripts. So further cutomization should be simple. See sxmo-util's [scripts directory](https://git.sr.ht/~mil/sxmo-utils/tree/master/scripts)) to get a better sense of how things are put together. You can edit the scripts on your system for temporary fixes and please consider [contributing](https://git.sr.ht/~mil/sxmo-docs/tree/master/CONTRIBUTING.md) your changes if you believe your modifications may be useful to other users.
+Much of Sxmo's core-functionality in regards to menus are built out via plain shell scripts. So further cutomization should be simple. See sxmo-util's [scripts directory](https://git.sr.ht/~mil/sxmo-utils/tree/master/scripts) to get a better sense of how things are put together. You can edit the scripts on your system for temporary fixes and please consider [contributing](https://git.sr.ht/~mil/sxmo-docs/tree/master/CONTRIBUTING.md) your changes if you believe your modifications may be useful to other users.
