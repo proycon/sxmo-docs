@@ -1,5 +1,13 @@
 # **Sxmo**: Simple X Mobile - *Changelog*
 ## Image Releases:
+- **0.1.6:** 
+  - sxmo-utils: 1.1.6
+  - sxmo-dwm: 6.2.6
+  - sxmo-dmenu: 4.9.4
+  - sxmo-st: 0.8.3.3
+  - sxmo-surf: 2.0.2
+  - sxmo-svkbd: 1.0.4
+  - lisgd: 0.1.0
 - **0.1.5:** 
   - sxmo-utils: 1.1.5
   - sxmo-dwm: 6.2.6
@@ -51,6 +59,26 @@
 
 ## Packages:
 ### sxmo-utils:
+#### 1.1.5 -> 1.1.6 (Published: 2020-06-14T09:56:55-05:00)
+- 2a925ed	Miles Alan: Allow calling numbers with + prefix
+- 24d686e	Miles Alan: Fix recording to only audio route when needed
+- 1460f0c	Miles Alan: Allow blinking multiple colors for blinkled
+- 2ee1342	Miles Alan: Move files script into top system menu
+- b50e3fd	Miles Alan: Move volume up/down to Audio
+- 818d7d5	Miles Alan: Use lisgd orientation -o flag in rotate script
+- 049a93e	Miles Alan: Shellcheck and tabindent all scripts
+- bd5ead1	Miles Alan: Fix shellcheck errors
+- 7f31a3d	Miles Alan: Simplify audio routing for modem call; add linemic via audio routing -l
+- d5ca81b	Miles Alan: Add sxmo_record.sh script and Record entry to scripts menu
+- 29098d7	Miles Alan: Allow sxmo_files.sh script to be called with $1 as startdir
+- fb44e88	Miles Alan: Support headphone (linejack) mic input in audio routing program
+- f10eab0	Miles Alan: Enable recording via dsnoop
+- 4c39cd1	Miles Alan: Add missing option for echomic -z to megi's audioroute program
+- 624b702	Anjandev Momi: sxmo_appmenu: do not excecute userscript unless permission set
+- 660506b	Miles Alan: Set LED for screenlock before grabbing focus (e.g. register on PP button hold immediately)
+- 1ac5e64	Miles Alan: Tab indent C programs for consistency
+- 3c65a36	Anjandev Momi: files: play audio files with mpv no-vid and add mp3 support
+
 #### 1.1.4 -> 1.1.5 (Published: 2020-06-07T20:44:03-05:00)
 - 41e2e31	Miles Alan: Fix bug with files script
 - 8015d49	Miles Alan: Run $XDG_CONFIG_HOME/sxmo/xinit if it exists on starting X
@@ -294,6 +322,11 @@
 - fbdfb49	Miles Alan: Bump up height of keyboard
 
 ### lisgd:
+#### 0.0.3 -> 0.1.0 (Published: 2020-06-14T09:14:42-05:00)
+- 7660ad6	Miles Alan: Fix typos and alphebetically sort docs for CLI flags
+- 51ecaea	Miles Alan: Add basic manpage and sync up README documentation
+- b4dd89a	Miles Alan: Rework logic to support diagnol gestures, rotation, and timeouts
+
 #### 0.0.2 -> 0.0.3 (Published: 2020-06-01T17:37:10-05:00)
 - 877beea	Miles Alan: Fix bug where on booting end position x/y = 0/0 causing improper LR gesture
 - becf4f2	Miles Alan: Improve gestures commandline flag documentation examples
