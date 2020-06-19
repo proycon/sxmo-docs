@@ -37,3 +37,8 @@ The mailing list is at:
 If you're new to development using `git-send-email` don't be discouraged and please still contribute!
 You can check out the guide at: [https://git-send-email.io/](https://git-send-email.io/) for some
 tips on how to get started using git-send-email.
+
+## **IRC Channel**
+Our IRC channel for general adhoc development dicussion is:
+
+`#sxmo` on `irc.freenode.net`
