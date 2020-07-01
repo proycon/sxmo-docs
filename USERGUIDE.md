@@ -278,7 +278,84 @@ For details on what changed between package versions or image releases
 refer to [the changelog](https://git.sr.ht/~mil/sxmo-docs/tree/master/CHANGELOG.md).
 
 ## **User Customizable Functionality**
-Sxmo's default scripts are built in a way such that certain features are user-customizable. The `$XDG_CONFIG_HOME`/sxmo directory is where user data and user-customizable scripts live. Note, by default, `$XDG_CONFIG_HOME=~/.config` so the default config directory for Sxmo is `~/.config/sxmo`.
+
+**Files and Folders**
+
+<table>
+  <thead>
+    <tr>
+      <td>Filepath</td>
+      <td>Description</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>$XDG_CONFIG_HOME/sxmo/xinit</td>
+      <td>Automatically executed script executed upon starting X.</td>
+    </tr>
+
+    <tr>
+      <td>$XDG_CONFIG_HOME/sxmo/contacts.tsv</td>
+      <td>
+        <p>TSV file wherein each row is: contactnumber TAB contactname</p>
+        <p>If unset all contacts will show up as 'Unknown Number'</p>
+      </td>
+    </tr>
+
+    <tr>
+      <td>$XDG_CONFIG_HOME/sxmo/sfeedrc</td>
+      <td>Sfeedrc file (see <a href="https://codemadness.org/git/sfeed/file/README.html">sfeed documentation</a> used by RSS script</td>
+    </tr>
+
+    <tr>
+      <td>$XDG_CONFIG_HOME/sxmo/sfeedrc</td>
+      <td>Sfeedrc file (see <a href="https://codemadness.org/git/sfeed/file/README.html">sfeed documentation</a> used by RSS script</td>
+    </tr>
+
+    <tr>
+      <td>$XDG_CONFIG_HOME/sxmo/userscripts</td>
+      <td>Directory to place user scripts which will automatically appear in the menu system</td>
+    </tr>
+
+  </tbody>
+</table>
+
+Note: `$XDG_CONFIG_HOME` by default is equal to `~/.config`.
+
+**Environment Variables**
+
+The following enviroment variables can be set:
+
+<table>
+  <thead>
+    <tr>
+      <td>Environment variable</td>
+      <td>Description</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>SXMO_RECDIR</td>
+      <td>Directory that the Record script will save recording to.</td>
+    </tr>
+    <tr>
+      <td>SXMO_WEATHER_ZIPS</td>
+      <td>US Zipcodes (newline-separated) to appear in menu for Weather script.</td>
+    </tr>
+    <tr>
+      <td>SXMO_SUBREDDITS</td>
+      <td>Subreddits (comma-separated) to appear in menu for Reddit script.</td>
+    </tr>
+    <tr>
+      <td>SXMO_GPSLOCATIONSFILES</td>
+      <td>
+        Files of GPS coordinates to populate the locations menu in the foxtrotgps menu.
+        Each file is expected to be a tsv; the first entry being the location; the second being lat/lon pair.
+      </td>
+    </tr>
+  </tbody>
+</table>
+
 
 **User Scripts**
 
@@ -287,17 +364,6 @@ User scripts are custom scripts the user can run via the [global system menu](#s
 For examples of scripts Sxmo users have made for their mobile devices, see: 
 
 - [~anjan/sxmo-userscripts](https://git.sr.ht/~anjan/sxmo-userscripts).
-
-**Custom xinit**
-
-Because you might want to have control over what's running in the X session, we allow for a custom user xinit to be run on starting X after logging into XDM. The user xinit script is located at `$XDG_CONFIG_HOME/sxmo/xinit`.
-
-One good example of where this xinit functionality might be helpful is for setting your wallpaper. You can use [feh](https://feh.finalrewind.org/) to set your wallpaper. Below is an example of setting your wallpaper to `$XDG_CONFIG_HOME/sxmo/wall.jpg`. Simply create a new executable file at `$XDG_CONFIG_HOME/sxmo/xinit` with the contents:
-
-```sh
-#!/usr/bin/env sh
-feh --bg-fill -z $XDG_CONFIG_HOME/sxmo/wall.jpg
-```
 
 **Further Customization**
 
