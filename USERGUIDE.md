@@ -302,7 +302,7 @@ refer to [the changelog](https://git.sr.ht/~mil/sxmo-docs/tree/master/CHANGELOG.
 
     <tr>
       <td>$XDG_CONFIG_HOME/sxmo/sfeedrc</td>
-      <td>Sfeedrc file (see <a href="https://codemadness.org/git/sfeed/file/README.html">sfeed documentation</a> used by RSS script</td>
+      <td>Sfeedrc file (see <a href="https://codemadness.org/git/sfeed/file/README.html">sfeed documentation</a> used by RSS script)</td>
     </tr>
 
     <tr>
@@ -327,7 +327,7 @@ The following enviroment variables can be set:
     </tr>
     <tr>
       <td>$SXMO_RECDIR</td>
-      <td>Directory that the Record script will save recording to.</td>
+      <td>Directory that the Record script will save recordings to.</td>
     </tr>
     <tr>
       <td>$SXMO_WEATHER_ZIPS</td>
@@ -340,8 +340,8 @@ The following enviroment variables can be set:
     <tr>
       <td>$SXMO_GPSLOCATIONSFILES</td>
       <td>
-        Files of GPS coordinates to populate the locations menu in the foxtrotgps menu.
-        Each file is expected to be a tsv; the first entry being the location; the second being lat/lon pair.
+        <p>Files of GPS coordinates to populate the locations menu in the foxtrotgps menu.</p>
+        <p>Each file is expected to be a tsv; the first entry being the location; the second being lat, lon pair.</p>
       </td>
     </tr>
   </tbody>
