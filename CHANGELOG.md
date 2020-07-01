@@ -1,5 +1,13 @@
 # **Sxmo**: Simple X Mobile - *Changelog*
 ## Image Releases:
+- **0.1.7:** 
+  - sxmo-utils: 1.1.7
+  - sxmo-dwm: 6.2.7
+  - sxmo-dmenu: 4.9.5
+  - sxmo-st: 0.8.3.3
+  - sxmo-surf: 2.0.2
+  - sxmo-svkbd: 1.0.4
+  - lisgd: 0.1.0
 - **0.1.6:** 
   - sxmo-utils: 1.1.6
   - sxmo-dwm: 6.2.6
@@ -59,6 +67,57 @@
 
 ## Packages:
 ### sxmo-utils:
+#### 1.1.6 -> 1.1.7 (Published: 2020-06-30T19:26:46-05:00)
+- a011bed	Miles Alan: Ensure shellcheck passes
+- 888ccc5	Miles Alan: Add Foxtrotgps back to programs menu
+- e648f73	Daniel Edgecumbe: smxo_appmenu.sh: Use 'which' to kill pre-existing instances
+- 4079d4d	Miles Alan: Don't loop after paste in Maps in sxmo_appmenu.sh
+- 18745b0	Miles Alan: Use setsid to update /tmp/sxmo_bar after call to refresh bar after process dead
+- b346392	Miles Alan: Remove system audio recording - should be done via userscript
+- f058e17	Miles Alan: SIGKILL on close menu in dialer
+- 4814701	Miles Alan: Kill existing foxtrotgps before setting new settings via gsettings This should prevent foxtrotgps from saving (e.g. overriding parameters) unintentionally between sessions
+- 25cc04e	Miles Alan: Cleanup sxmo_weather.sh shellscript and make sure shellcheck passes
+- ad39251	Miles Alan: Show incoming contact name on ring; show texts in reverse chronological order
+- 844ce9d	Miles Alan: Plus prefix strip numbers before storing into modem log
+- e3f50e9	Miles Alan: Only show entries to text for directories that exist; fix number bugs
+- 917ad2e	Miles Alan: Remove temp files usage from sxmo_contacts.sh; & use awk to allow unsorted
+- a032e49	Miles Alan: Remove +1 stripping from numbers in modem scripts
+- 9f930e7	Miles Alan: Simplify sxmo_contacts.sh - use less tempfiles and join logic, output w/ colon
+- f95cb51	Anjandev Momi: add contacts.tsv integration to call and text apps
+- ff9ddcb	Miles Alan: Allow customization of zipcodes menu for sxmo_weather.sh via $SXMO_WEATHERZIPS
+- a804e24	Maarten van Gompel: added New Tab and New Window to firefox menu
+- efc1051	Maarten van Gompel: fixed typo
+- e455d31	Maarten van Gompel: read custom conky.conf if available
+- 46a8999	Miles Alan: Fix gps location setting bug
+- 67e9320	Miles Alan: Fix Close Menu entry for youtube script
+- c119ab0	Miles Alan: Pull dialing functionality into seperate script; allows in-call check to be valid
+- 391df5d	Miles Alan: Fix syntax error in sxmo_appmenu.sh; trap not signal
+- 8ee22f3	Miles Alan: Quote $@ where needed
+- dfca1ed	Miles Alan: Fix shellcheck issue with reddit script
+- cef4de2	Miles Alan: Use "$@" for expansion calls rather than manually listing argument numbers
+- d4a6bac	Miles Alan: sxmo_record.sh Fix call to getdur in filename generation
+- 95f93c8	Miles Alan: sxmo_appmenu.sh Only ever pick first match in sxmo_appmenu.sh
+- 26d8ff0	Miles Alan: sxmo_appmenu.sh: Never literal string grep match on empty string
+- 6cbd867	Miles Alan: Set scale to be 5 for bc lat/lon converisons
+- 00e09e6	Miles Alan: Allow user customization of map locations via SXMO_GPSLOCATIONSFILES
+- b80ce9e	Miles Alan: Disable ligsd 1 finger gestures while using foxtrotgps
+- 60963cd	Miles Alan: Start lisgd via a script instead of directly so changing gestures is simpler
+- 061d253	Miles Alan: Fill out gpsgeoclutget fn to call where-am-i to get current lat/lon
+- 1d13cb6	Miles Alan: Make sure shellcheck passes and fixup style in sxmo_gpsutil.sh script
+- 9709acc	Miles Alan: Implement context menu for foxtrotgps with copy/paste/search/locations Rename context menu title for foxtrotgps to Maps and move to top-level menu
+- 91d6ebb	Miles Alan: Call improvements; fix bugs associated with hanging up; refresh bar on callend
+- f88b83f	Julian P Samaroo: sxmo_appmenu: Show symlinked scripts in userscripts menu
+- c867613	Miles Alan: Cleanup record script; respect $SXMO_RECDIR; cut ms in file; allow ext calling
+- c7eb70d	Miles Alan: Youtube script bugfixes
+- 51921e5	Miles Alan: Fix bug preventing hanging up call upon killing window
+- 34cd1fd	Miles Alan: Make close menu entry in scripts more functional
+- f4aea53	Miles Alan: Add reddit script
+- bca4475	Miles Alan: Show duration of call in statusbar
+- a74b91a	Miles Alan: Add license
+- a4b2724	Miles Alan: Clean up modem functionality & don't ever kill dmenu; move call monitoring to call script
+- 3c5a85a	Miles Alan: Add windowify toggle to the in call menu
+- 521243a	Miles Alan: Fix sxmo_modemlog.sh to use st -f
+
 #### 1.1.5 -> 1.1.6 (Published: 2020-06-14T09:56:55-05:00)
 - 2a925ed	Miles Alan: Allow calling numbers with + prefix
 - 24d686e	Miles Alan: Fix recording to only audio route when needed
@@ -185,6 +244,11 @@
 - 309ba56	Miles Alan: Autoenable dmix by adding basic dmix conf to /etc/asound.conf
 
 ### sxmo-dwm:
+#### 6.2.6 -> 6.2.7 (Published: 2020-06-30T19:22:07-05:00)
+- 7b3a479	Miles Alan: Show tabs as equal sizes when using bstack
+- 8935bde	Miles Alan: Run sxmo_lisgdstart.sh instead of lisgd directly to restart lisgd properly
+- 4ac2cd4	Miles Alan: Run xdotool windowkill instead of dwm's killclient fn for now for window kill This seems more reliable..
+
 #### 6.2.5 -> 6.2.6 (Published: 2020-05-30T15:09:50-05:00)
 - 5adf679	Miles Alan: Delete dead code
 - 56785cf	Miles Alan: Kill lisgd before starting screenlock and then start it back up after exiting
@@ -248,6 +312,9 @@
 - 90f6878	Christopher Drelich: Function to cycle through available layouts.
 
 ### sxmo-dmenu:
+#### 4.9.4 -> 4.9.5 (Published: 2020-06-16T21:40:30-05:00)
+- 18d1263	Miles Alan: Add -wm flag to run dmenu as managed WM window (e.g. no override_redirect)
+
 #### 4.9.3 -> 4.9.4 (Published: 2020-05-29T18:59:12-05:00)
 - 22b5776	Miles Alan: Make scroll patch compatible with numbers patch
 - d39b668	Miles Alan: Fix scroll patch alignment in horizontal mode
