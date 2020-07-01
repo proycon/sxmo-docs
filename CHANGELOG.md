@@ -67,7 +67,8 @@
 
 ## Packages:
 ### sxmo-utils:
-#### 1.1.6 -> 1.1.7 (Published: 2020-06-30T19:26:46-05:00)
+#### 1.1.6 -> 1.1.7 (Published: 2020-06-30T22:29:32-05:00)
+- 435a1e7	Miles Alan: Create empty file for contactsfile if missing
 - a011bed	Miles Alan: Ensure shellcheck passes
 - 888ccc5	Miles Alan: Add Foxtrotgps back to programs menu
 - e648f73	Daniel Edgecumbe: smxo_appmenu.sh: Use 'which' to kill pre-existing instances
