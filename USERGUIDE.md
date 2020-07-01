@@ -282,13 +282,11 @@ refer to [the changelog](https://git.sr.ht/~mil/sxmo-docs/tree/master/CHANGELOG.
 **Files and Folders**
 
 <table>
-  <thead>
-    <tr>
-      <td>Filepath</td>
-      <td>Description</td>
-    </tr>
-  </thead>
   <tbody>
+    <tr>
+      <td><strong>Filepath</strong></td>
+      <td><strong>Description</strong></td>
+    </tr>
     <tr>
       <td>$XDG_CONFIG_HOME/sxmo/xinit</td>
       <td>Automatically executed script executed upon starting X.</td>
@@ -327,13 +325,11 @@ Note: `$XDG_CONFIG_HOME` by default is equal to `~/.config`.
 The following enviroment variables can be set:
 
 <table>
-  <thead>
-    <tr>
-      <td>Environment variable</td>
-      <td>Description</td>
-    </tr>
-  </thead>
   <tbody>
+    <tr>
+      <td><strong>Environment variable</strong></td>
+      <td><strong>Description</strong></td>
+    </tr>
     <tr>
       <td>SXMO_RECDIR</td>
       <td>Directory that the Record script will save recording to.</td>
