@@ -306,11 +306,6 @@ refer to [the changelog](https://git.sr.ht/~mil/sxmo-docs/tree/master/CHANGELOG.
     </tr>
 
     <tr>
-      <td>$XDG_CONFIG_HOME/sxmo/sfeedrc</td>
-      <td>Sfeedrc file (see <a href="https://codemadness.org/git/sfeed/file/README.html">sfeed documentation</a> used by RSS script</td>
-    </tr>
-
-    <tr>
       <td>$XDG_CONFIG_HOME/sxmo/userscripts</td>
       <td>Directory to place user scripts which will automatically appear in the menu system</td>
     </tr>
@@ -318,7 +313,7 @@ refer to [the changelog](https://git.sr.ht/~mil/sxmo-docs/tree/master/CHANGELOG.
   </tbody>
 </table>
 
-Note: `$XDG_CONFIG_HOME` by default is equal to `~/.config`.
+Note: `$XDG_CONFIG_HOME` by default is equal to `~/.config`
 
 **Environment Variables**
 
@@ -331,19 +326,19 @@ The following enviroment variables can be set:
       <td><strong>Description</strong></td>
     </tr>
     <tr>
-      <td>SXMO_RECDIR</td>
+      <td>$SXMO_RECDIR</td>
       <td>Directory that the Record script will save recording to.</td>
     </tr>
     <tr>
-      <td>SXMO_WEATHER_ZIPS</td>
+      <td>$SXMO_WEATHER_ZIPS</td>
       <td>US Zipcodes (newline-separated) to appear in menu for Weather script.</td>
     </tr>
     <tr>
-      <td>SXMO_SUBREDDITS</td>
+      <td>$SXMO_SUBREDDITS</td>
       <td>Subreddits (comma-separated) to appear in menu for Reddit script.</td>
     </tr>
     <tr>
-      <td>SXMO_GPSLOCATIONSFILES</td>
+      <td>$SXMO_GPSLOCATIONSFILES</td>
       <td>
         Files of GPS coordinates to populate the locations menu in the foxtrotgps menu.
         Each file is expected to be a tsv; the first entry being the location; the second being lat/lon pair.
@@ -351,6 +346,8 @@ The following enviroment variables can be set:
     </tr>
   </tbody>
 </table>
+
+Most likely you will want to set these environment variables in the file `$XDG_CONFIG_HOME/sxmo/xinit` so that they are globally applied to the X session.
 
 
 **User Scripts**
