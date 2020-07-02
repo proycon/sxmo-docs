@@ -204,6 +204,40 @@ When a new text message comes in:
 - The green LED will trigger
 - To view the new text message, refer to the **Texting** section above
 
+**Contacts System**
+
+The Sxmo contacts system based on a plain TSV file that can be placed at `$XDG_CONFIG_HOME/sxmo/contacts.tsv`.
+This TSV file is expected to have two columns: phonenumber, and contactname. An
+example might look like:
+
+```
+122345628	John Smith
+128371642	Jeff Foo
+```
+
+Upon receiving a call if you have a contact stored associated with the incoming
+number, the contact name will appear instead of the number. Also contact names
+will appear in the Texts and Dialer menus if they are present in the contacts
+TSV file. If no `contacts.tsv` is present, or the number is missing from this
+file; the contact in menus will show up as `Unknown Number`.
+
+**International Numbers**
+
+Note that you should **always** prefix numbers you call out with, text to, or
+add to the contact system **with their international prefix code** but without
+the plus.
+
+Behind the scenes for `mmcli`, numbers always come into the system with
+international prefixes from my testing. So if you receieve a call from the number
+`54321` for example; it would come into mmcli as `+154321` if this was a US number. To 
+compensate for this behavior, our scripts strip the plus (`+`) symbol but 
+otherwise leave the number *as-is*.
+
+This means if you dial, text, and store contacts *with the internationl prefix*,
+you can be assured that texts / outgoing / incoming calls will line up in 
+regards to deduplication of contacts in menus and text message threads 
+will stay intact.
+
 
 ## **Included Scripts and Applications**
 In the [global system menu](#strongincluded-menusstrong) there are entries for both applications and
