@@ -166,29 +166,31 @@ will automatically be launched which let's you:
 
 **Texting**
 
-To view existing text message threads you can use the *Texts* entry in the [global system menu](#strongincluded-menusstrong).
-This menu will let you tail follow a logfile for your conversation with each
-number. When a new text is sent or received; the tail will automatically be 
-updated with the new text contents.
+To view existing text message threads you can use the *Texts* entry in the
+[global system menu](#strongincluded-menusstrong).  This menu will let
+you tail follow a logfile for your conversation with each number. When
+a new text is sent or received; the tail will automatically be updated
+with the new text contents.
 
-To compose a new text message, from the *Texts* entry you will see a *Send a Text*
-entry which first prompt you for a number. After entering the destination number
-you will be dropped into a vim-like editor ([vis](https://github.com/martanne/vis)) 
-to compose your message. Once your message is as you'd like it, exit the editor 
-using `ZZ`/`:w`/or by holding down (or triple clicking) the volume down key. 
-You will now be taken to a new menu to confirm your message from which 
-you can edit/send/cancel the message.
+To compose a new text message, from the *Texts* entry you will see a
+*Send a Text* entry which first prompt you for a number. After entering
+the destination number you will be dropped into a vim-like editor
+([vis](https://github.com/martanne/vis)) to compose your message. Once
+your message is as you'd like it, exit the editor using `ZZ`/`:w`/or
+by holding down (or triple clicking) the volume down key.  You will
+now be taken to a new menu to confirm your message from which you can
+edit/send/cancel the message.
 
 **Monitoring for Incoming Calls/Texts**
 
-A vital feature of a working phone is being able to receive new texts and 
-pickup calls. This functionality is made possible through a script that 
-monitors the modem every few seconds for new activity and vibrates the phone 
-and blinks the green LED when there is an incoming text/call. This 
-functionality is optional and can be toggled on/off (e.g. to have a 'silent' mode) 
-via the [Config menu](#strongincluded-menusstrong). By default the modem monitoring
-is set to off. You can tell if modem monitoring is on as there will be an "M"
-icon that appears in dwm's bar.
+A vital feature of a working phone is being able to receive new texts and
+pickup calls. This functionality is made possible through a script that
+monitors the modem every few seconds for new activity and vibrates the
+phone and blinks the green LED when there is an incoming text/call. This
+functionality is optional and can be toggled on/off (e.g. to have a
+'silent' mode) via the [Config menu](#strongincluded-menusstrong). By
+default the modem monitoring is set to off. You can tell if modem
+monitoring is on as there will be an "M" icon that appears in dwm's bar.
 
 While a call is incoming:
 
@@ -206,37 +208,34 @@ When a new text message comes in:
 
 **Contacts System**
 
-The Sxmo contacts system based on a plain TSV file that can be placed at `$XDG_CONFIG_HOME/sxmo/contacts.tsv`.
-This TSV file is expected to have two columns: phonenumber, and contactname. An
-example might look like:
+The Sxmo contacts system based on a plain TSV file that can be placed at
+`$XDG_CONFIG_HOME/sxmo/contacts.tsv`.  This TSV file is expected to have
+two columns: phonenumber, and contactname. Upon receiving a call if you
+have a contact stored associated with the incoming number, the contact
+name will appear instead of the number. Also contact names will appear
+in the Texts and Dialer menus if they are present in the contacts TSV
+file. If no `contacts.tsv` is present, or the number is missing from
+this file; the contact in menus will show up as `Unknown Number`.
+An `contacts.tsv` example might look like:
 
 ```
 122345628	John Smith
 128371642	Jeff Foo
 ```
 
-Upon receiving a call if you have a contact stored associated with the incoming
-number, the contact name will appear instead of the number. Also contact names
-will appear in the Texts and Dialer menus if they are present in the contacts
-TSV file. If no `contacts.tsv` is present, or the number is missing from this
-file; the contact in menus will show up as `Unknown Number`.
-
 **International Numbers**
 
-Note that you should **always** prefix numbers you call out with, text to, or
-add to the contact system **with their international prefix code** but without
-the plus.
-
-Behind the scenes for `mmcli`, numbers always come into the system with
-international prefixes from my testing. So if you receieve a call from the number
-`54321` for example; it would come into mmcli as `+154321` if this was a US number. To 
-compensate for this behavior, our scripts strip the plus (`+`) symbol but 
-otherwise leave the number *as-is*.
-
-This means if you dial, text, and store contacts *with the internationl prefix*,
-you can be assured that texts / outgoing / incoming calls will line up in 
-regards to deduplication of contacts in menus and text message threads 
-will stay intact.
+Note that you should **always** prefix numbers you call out with, text to,
+or add to the contact system **with their international prefix code**
+but without the plus. Behind the scenes for `mmcli`, numbers always
+come into the system with international prefixes from my testing. So if
+you receieve a call from the number `54321` for example; it would come
+into mmcli as `+154321` if this was a US number. To compensate for this
+behavior, our scripts strip the plus (`+`) symbol but otherwise leave the
+number *as-is*. This means if you dial, text, and store contacts *with
+the internationl prefix*, you can be assured that texts / outgoing /
+incoming calls will line up in regards to deduplication of contacts in
+menus and text message threads will stay intact.
 
 
 ## **Included Scripts and Applications**
