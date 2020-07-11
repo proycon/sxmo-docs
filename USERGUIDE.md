@@ -382,6 +382,21 @@ The following enviroment variables can be set:
 
 Most likely you will want to set these environment variables in the file `$XDG_CONFIG_HOME/sxmo/xinit` so that they are globally applied to the X session.
 
+**User-customizable xinitrc**
+For the above `ENV` variables and also to launch custom programs upon starting X
+you can use the user customizable xinitrc. An example might look like:
+
+```sh
+#!/usr/bin/env sh
+# Launch firefox instead of surf triple-clicking/holding down powerdown
+export BROWSER=firefox
+
+# Prepopulate Subreddits menu with custom subreddits
+export SXMO_SUBREDDITS="asmr unixporn wtf"
+
+# Launch st that says hello world on starting enviroment
+st -e sh -c 'echo hello world!; read' &
+```
 
 **User Scripts**
 
