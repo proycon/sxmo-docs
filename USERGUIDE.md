@@ -324,7 +324,6 @@ refer to [the changelog](https://git.sr.ht/~mil/sxmo-docs/tree/master/CHANGELOG.
       <td>$XDG_CONFIG_HOME/sxmo/xinit</td>
       <td>Automatically executed script executed upon starting X.</td>
     </tr>
-
     <tr>
       <td>$XDG_CONFIG_HOME/sxmo/contacts.tsv</td>
       <td>
@@ -332,17 +331,14 @@ refer to [the changelog](https://git.sr.ht/~mil/sxmo-docs/tree/master/CHANGELOG.
         <p>If unset all contacts will show up as 'Unknown Number'</p>
       </td>
     </tr>
-
     <tr>
       <td>$XDG_CONFIG_HOME/sxmo/sfeedrc</td>
       <td>Sfeedrc file (see <a href="https://codemadness.org/git/sfeed/file/README.html">sfeed documentation</a> used by RSS script)</td>
     </tr>
-
     <tr>
       <td>$XDG_CONFIG_HOME/sxmo/userscripts</td>
       <td>Directory to place user scripts which will automatically appear in the menu system</td>
     </tr>
-
   </tbody>
 </table>
 
@@ -395,6 +391,7 @@ The following enviroment variables can be set:
 Most likely you will want to set these environment variables in the file `$XDG_CONFIG_HOME/sxmo/xinit` so that they are globally applied to the X session.
 
 **User-customizable xinitrc**
+
 For the above `ENV` variables and also to launch custom programs upon starting X
 you can use the user customizable xinitrc. An example might look like:
 
