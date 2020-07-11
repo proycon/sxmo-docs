@@ -359,6 +359,18 @@ The following enviroment variables can be set:
       <td><strong>Description</strong></td>
     </tr>
     <tr>
+      <td>$TERM</td>
+      <td>Terminal to launch on double-clicking button and used in scripts.</td>
+    </tr>
+    <tr>
+      <td>$BROWSER</td>
+      <td>Browser to launch on triple-clicking/holding power-button and used in scripts</td>
+    </tr>
+    <tr>
+      <td>$EDITOR</td>
+      <td>Editor to use to handle files (partial support; full support plans for composing texts etc.)</td>
+    </tr>
+    <tr>
       <td>$SXMO_RECDIR</td>
       <td>Directory that the Record script will save recordings to.</td>
     </tr>
