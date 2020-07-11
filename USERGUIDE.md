@@ -388,12 +388,12 @@ The following enviroment variables can be set:
   </tbody>
 </table>
 
-Most likely you will want to set these environment variables in the file `$XDG_CONFIG_HOME/sxmo/xinit` so that they are globally applied to the X session.
-
 **User-customizable xinitrc**
 
-For the above `ENV` variables and also to launch custom programs upon starting X
-you can use the user customizable xinitrc. An example might look like:
+For the above Enviroment Variables and also to launch custom programs upon
+starting X you can use the user customizable `xinit` described in the
+Files and Folders section.  An example you might use to get started
+could look like:
 
 ```sh
 #!/usr/bin/env sh
@@ -407,9 +407,19 @@ export SXMO_SUBREDDITS="asmr unixporn wtf"
 st -e sh -c 'echo hello world!; read' &
 ```
 
+Place the contents above into `~/.config/sxmo/xinit` and restart X and
+customize away.
+
 **User Scripts**
 
-User scripts are custom scripts the user can run via the [global system menu](#strongincluded-menusstrong). To add your own custom userscript, create the `$XDG_CONFIG_HOME/sxmo/userscripts` directory and place your `.sh` scripts in the `userscripts` directory. If the `userscripts` folder is populated with atleast one script, a new menu item called `Userscripts` will appear in the [global system menu](#strongincluded-menusstrong). Note, Userscripts should be set to be executable.
+User scripts are custom scripts the user can run via the [global
+system menu](#strongincluded-menusstrong). To add your own custom
+userscript, create the `$XDG_CONFIG_HOME/sxmo/userscripts` directory
+and place your `.sh` scripts in the `userscripts` directory. If the
+`userscripts` folder is populated with atleast one script, a new
+menu item called `Userscripts` will appear in the [global system
+menu](#strongincluded-menusstrong). Note, Userscripts should be set to
+be executable.
 
 For examples of scripts Sxmo users have made for their mobile devices, see: 
 
@@ -417,4 +427,12 @@ For examples of scripts Sxmo users have made for their mobile devices, see:
 
 **Further Customization**
 
-Much of Sxmo's core-functionality in regards to menus are built out via plain shell scripts. So further cutomization should be simple. See sxmo-util's [scripts directory](https://git.sr.ht/~mil/sxmo-utils/tree/master/scripts) to get a better sense of how things are put together. You can edit the scripts on your system for temporary fixes and please consider [contributing](https://git.sr.ht/~mil/sxmo-docs/tree/master/CONTRIBUTING.md) your changes if you believe your modifications may be useful to other users.
+Much of Sxmo's core-functionality in regards to menus
+are built out via plain shell scripts. So further
+cutomization should be simple. See sxmo-util's [scripts
+directory](https://git.sr.ht/~mil/sxmo-utils/tree/master/scripts)
+to get a better sense of how things are put together. You can edit
+the scripts on your system for temporary fixes and please consider
+[contributing](https://git.sr.ht/~mil/sxmo-docs/tree/master/CONTRIBUTING.md)
+your changes if you believe your modifications may be useful to other
+users.
