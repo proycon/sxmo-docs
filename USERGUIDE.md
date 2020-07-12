@@ -390,10 +390,10 @@ The following enviroment variables can be set:
 
 **User-customizable xinitrc**
 
-For the above Enviroment Variables and also to launch custom programs upon
-starting X you can use the user customizable `xinit` described in the
-Files and Folders section.  An example you might use to get started
-could look like:
+For setting the above Enviroment Variables and also to launch custom
+programs upon starting X you can use the user customizable `xinit`
+described in the Files and Folders section.  An example you might use
+to get started could look like:
 
 ```sh
 #!/usr/bin/env sh
