@@ -20,6 +20,11 @@ images under the hood are based on [postmarketOS](http://postmarketos.org).
 3. Write  the image to your SD card: `dd if=sxmo-pinephone*.img of=/dev/mmcblkp0`
 4. Pop the SD card into your Pinephone and see the [Userguide](https://git.sr.ht/~mil/sxmo-docs/tree/master/USERGUIDE.md)
 5. Please note, the default username/password combination is: `mo`/`mo`
+6. Also note, the first time you boot up your SD card with Sxmo; pmOS will resize
+   the root filesystem partition to the full size of the SD card. The time this takes
+   is proportional to the size of the SD card, so if you use a large card expect
+   this to take a few minutes - this is a one-time process and subsequent boots
+   will be faster.
 
 ## **Alternative: Using the Packages for Alpine Linux** (new or existing pmOS install)
 

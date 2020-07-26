@@ -281,17 +281,6 @@ won't automatically apply; rather audio will automatically be initially routed
 to the earpiece and then changeable through the in call menu. Upon the call 
 ending, audio is always routed back to the headphone jack.
 
-## **Resize SD Card Size**
-The images that our continuous integration system bakes won't automatically
-resize on boot unfortunately; so you may notice you'll quickly run out of disk
-space as only a small amount of extra disk space is reserved. To resolve this
-you can run from another computer with your the Sxmo SD card mounted as `mmcblk1`:
-
-```
-echo -e "d\n2\nn\np\n\n\n\nw" | fdisk /dev/mmcblk1
-resize2fs /dev/mmcblk1p2
-```
-
 ## **Updating and Changelog**
 Sxmo's packages are currently distributed through an Alpine repository so
 when new package versions are periodically pushed; your install can be 
