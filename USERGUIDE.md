@@ -122,26 +122,38 @@ aforementioned and selecting *Config*. This menu let you:
 
 
 ## **Screen Lock**
-A custom application ([sxmo_screenlock](https://git.sr.ht/~mil/sxmo-utils/tree/master/programs/sxmo_screenlock.c)) enables you to lock the screen
-so no tap events are processed. You can activate the screen lock by tapping 
-the volume raise key three times quickly or holding the volume raise key down. 
-You will see the Pinephone's blue LED indicator activate.
+A custom application ([sxmo_screenlock](https://git.sr.ht/~mil/sxmo-utils/tree/master/programs/sxmo_screenlock.c))
+enables you to lock the screen so no tap events are processed. This application 
+also allows you to enter suspend (deep sleep / CRUST). You can activate the
+screen lock by tapping the volume raise key three times quickly or holding the
+volume raise key down.  You will see the Pinephone's blue LED indicator activate. 
 
-The Screenlock has two modes:
+The Screenlock has three modes:
 
 - **Screenlock display on mode**: Locks the screen and disables input; but keeps the screen on
   - Indicated by blue LED
 - **Screenlock display off mode**: Locks the screen, disables input, and turns the screen off
+  - Indicated by purple LED
+- **Screenlock deep sleep mode**: Enters CRUST suspend / deep sleep
   - Indicated by red LED
 
 While using the Screenlock, only the following bindings apply
 (and override the [default dwm button bindings](#strongglobal-ui-controlsstrong)):
 
-- **Volume Raise** or **Volume Lower**:
+- **Volume Raise**:
+  - **3 taps**: Enter screenlock deep sleep mode
+- **Volume Lower**:
   - **3 taps**: Toggle between screenlock display on/off mode
 - **Powerkey**:
   - **3 taps**: Exit screen lock
 
+When you are in deep sleep mode (entered by tapping volume raise 3 times), you
+can exit this mode and restore the above bindings by clicking the powerkey once.
+After exiting deep sleeep mode, within 5 seconds  you should either press the
+volume lower or powerkey 3 times to switch modes or exit. After 5 seconds, the
+blinking stops and you will be kicked back into deep sleep mode. The purpose of
+this 5 second timeout is so that if you accidently press the powerkey when the
+phone is in your pocket, you won't inadvertently be kicked out of CRUST.
 
 ## **Calls and Texting**
 Calling and texting is fully functional and should work out-of-the-box. Make
