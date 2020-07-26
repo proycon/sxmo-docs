@@ -1,5 +1,13 @@
 # **Sxmo**: Simple X Mobile - *Changelog*
 ## Image Releases:
+- **0.1.8:** 
+  - sxmo-utils: 1.1.8
+  - sxmo-dwm: 6.2.8
+  - sxmo-dmenu: 4.9.5
+  - sxmo-st: 0.8.3.3
+  - sxmo-surf: 2.0.3
+  - sxmo-svkbd: 1.0.5
+  - lisgd: 0.1.0
 - **0.1.7:** 
   - sxmo-utils: 1.1.7
   - sxmo-dwm: 6.2.7
@@ -67,6 +75,57 @@
 
 ## Packages:
 ### sxmo-utils:
+#### 1.1.7 -> 1.1.8 (Published: 2020-07-26T11:22:59-05:00)
+- e20a467	Miles Alan: Bump up sxmo_appmenu.sh to allow 16 entries
+- 5c1e382	Miles Alan: Run sxmo_lisgdstart.sh instead of lisgd in sxmo_lock.sh
+- 113f756	Maarten van Gompel: Adding a wrapper around sxmo_screenlock, with lock/unlock hooks. Allow setting a target state for sxmo_screenlock, and cleanup on sigterm. Added lock/suspend options to the power menu.
+- b513949	Maarten van Gompel: Added make clean
+- ace9960	Maarten van Gompel: Made choice for virtual keyboard configurable through the $KEYBOARD environment variable.
+- 293bf69	Julian P Samaroo: Add Power menu to appmenu
+- c100262	Miles Alan: Remove shellcheck error in sxmo_appmenu.sh
+- 3e23624	Miles Alan: Fix typo in sxmo_modemtext.sh
+- 92c368c	Anjandev Momi: allow texting over ssh terminal
+- f3275b7	Miles Alan: After exiting suspend blink LED while in temporary suspend pending state
+- bfdbe29	Maarten van Gompel: added deeper context menus for vim/vis, nano, tuir, ncmpcpp, w3m
+- 03025fa	Miles Alan: Delete exit entries from Sxiv / Feh - this should be done via btns or globally
+- 36520d4	Miles Alan: Change ring hook location to ~/.config/sxmo/hooks/ring
+- 9378530	Dmytro: Ringing sound configurable
+- 92e185b	Anjandev Momi: Add XDG user directories and env variables
+- d4cb102	Maarten van Gompel: added app context menu for feh and sxiv (image viewers)
+- 5c4c6c1	Miles Alan: Refactor xinit to be more structured and set $EDITOR if unset to vis
+- d2ee25d	Miles Alan: Allow viewing cached RSS feeds via toggling on/off fetch option
+- 92e048a	Miles Alan: Screenlock: Recognize keyrelease rather than keydown to avoid inadvertent exits
+- a50f1d3	Stephen Paul Weber: Allow easily searching in the page from surf menu
+- 579503e	Miles Alan: Add udev rules to update status bar plugging in / unplugging charger
+- 0801bb1	Miles Alan: Restructure configs into seperate folder
+- d713b19	Miles Alan: Use sxmo_statusbarupdate.sh script instead of direct calls duplicated logic
+- 10705f0	Miles Alan: Update statusbar on waking up from deep sleep so battery % & time accurate
+- 87c99ec	Miles Alan: Use USR1 signal instead of update file for updating statusbar
+- f448f3c	Miles Alan: Source rather than just run the user's custom xinit file; allows exporting ENV
+- 4fe1298	Miles Alan: Fix weather hourly forecast time for <12hr times
+- 383c523	Miles Alan: 5s timeout for StateSuspendPending
+- fe24fec	Anjandev Momi: make files dmenu case insensitive
+- a35ca3f	Miles Alan: screenlock - Sort functions alphabetically; add declarations; and fix warnings
+- b51644b	Miles Alan: screenlock - Implement StateSuspendPending so exiting CRUST requires 3 clicks
+- 0013ea3	Anjandev Momi: files: if folder name longer than 7 characters, truncate
+- a245f46	Anjandev Momi: screenlock: enable rtc wakeup source
+- cf4cd1b	Miles Alan: Retain brightness when entering screenlock
+- 7b3be04	Miles Alan: Disable buggy bluetooth driver before entering suspend
+- aa8513b	Miles Alan: Use direct open/write/close instead of stdlib calls for device IO
+- 37941f6	Miles Alan: Always reconfigure wakeup sources before entering suspend
+- be6737e	Miles Alan: Always wake up from suspend to StateNoInput
+- 4d9d1ec	Miles Alan: Modify screenlock to suspend on triple pressing volume down button
+- f25bb82	Miles Alan: Fix loop for sxmo_weather.sh
+- 57f6e58	Miles Alan: Loop reddit script and use URL handler script with fork
+- 7a9ec12	Miles Alan: Fork urlhandler program if run with fork option and pass opt in RSS script
+- fe15eb6	Miles Alan: Loop weather script fetch/display logic
+- 95e36cc	Miles Alan: Loop RSS script so that you can launch multiple items without reopening
+- e006799	Miles Alan: Always kick mpv to use -ao=alsa; prevents alsa from trying to use pulse
+- 9919f49	Miles Alan: Modify weather script to pull hourly data and format in tables
+- 95f171e	Miles Alan: Delete zipcodes config file - GPS locations is better, and international
+- 07119a7	Anjandev Momi: make dmenus with contact names case insensitive
+- 63d5ec3	Maarten van Gompel: added wireless symbol to bar if wireless is connected
+
 #### 1.1.6 -> 1.1.7 (Published: 2020-06-30T22:29:32-05:00)
 - 435a1e7	Miles Alan: Create empty file for contactsfile if missing
 - a011bed	Miles Alan: Ensure shellcheck passes
@@ -245,6 +304,10 @@
 - 309ba56	Miles Alan: Autoenable dmix by adding basic dmix conf to /etc/asound.conf
 
 ### sxmo-dwm:
+#### 6.2.7 -> 6.2.8 (Published: 2020-07-25T21:05:11+02:00)
+- 749ee65	Maarten van Gompel: Use $KEYBOARD environment variable and use sxmo_lock.sh
+- 486e1bc	Miles Alan: Blink blue instead of green on launching new terminal/surf
+
 #### 6.2.6 -> 6.2.7 (Published: 2020-06-30T19:22:07-05:00)
 - 7b3a479	Miles Alan: Show tabs as equal sizes when using bstack
 - 8935bde	Miles Alan: Run sxmo_lisgdstart.sh instead of lisgd directly to restart lisgd properly
@@ -357,6 +420,11 @@
 - fa6d2dd	Miles Alan: Add scrollback patch
 
 ### sxmo-surf:
+#### 2.0.2 -> 2.0.3 (Published: 2020-07-18T18:07:43-05:00)
+- 5f3e28e	Miles Alan: Recognize URLs starting with // as valid URLs via regex instead of searching
+- c71226a	Stephen Paul Weber: Always set _SURF_URI on load event
+- c0bb3d1	Stephen Paul Weber: Enable searching by keyword on URL inputs
+
 #### 2.0.1 -> 2.0.2 (Published: 2020-05-13T19:50:51-05:00)
 - 1f3b5a5	Miles Alan: Fix the homepage to actually work properly
 - 2e70dbb	Miles Alan: homagepage
@@ -372,6 +440,11 @@
 - e296323	Miles Alan: Pull up dmenu with kb
 
 ### sxmo-svkbd:
+#### 1.0.4 -> 1.0.5 (Published: 2020-07-23T18:22:39-05:00)
+- 4fc0c19	Miles Alan: Restore original svkbd colorscheme and bump up to use monospace-18 as font
+- f3a0a23	Miles Alan: Fix SIGTERM functionality by making sure to sync before free in cleanup()
+- 76e7e35	Maarten van Gompel: Added Xft support (in the same fashion as done in dmenu by Hiltjo Posthuma), Xinerama support, changed colors and key layout
+
 #### 1.0.3 -> 1.0.4 (Published: 2020-05-11T21:49:58-05:00)
 - 38f41bf	Miles Alan: Add pipe key to backslash key
 - db485ab	Miles Alan: Run XFlush instead of XSync before starting main loop; fixes bug where rending of keys fails when used in conjunction w/ dwm dock patch
