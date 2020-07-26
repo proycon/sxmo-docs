@@ -357,15 +357,19 @@ The following enviroment variables can be set:
     </tr>
     <tr>
       <td>$TERM</td>
-      <td>Terminal to launch on double-clicking button and used in scripts.</td>
+      <td>Terminal to launch on double-clicking power button and used in scripts. Defaults to `st`.</td>
     </tr>
     <tr>
       <td>$BROWSER</td>
-      <td>Browser to launch on triple-clicking/holding power-button and used in scripts</td>
+      <td>Browser to launch on triple-clicking/holding power-button and used in scripts. Defaults to `surf`.</td>
+    </tr>
+    <tr>
+      <td>$KEYBOARD</td>
+      <td>Keyboard to launch on single-clicking power button and used in scripts. Defaults to `svkbd-sxmo`.</td>
     </tr>
     <tr>
       <td>$EDITOR</td>
-      <td>Editor to use to handle files (partial support; full support plans for composing texts etc.)</td>
+      <td>Editor to use to handle files (partial support; full support plans for composing texts etc). Defaults to `vis`.</td>
     </tr>
     <tr>
       <td>$SXMO_RECDIR</td>
