@@ -340,6 +340,10 @@ refer to [the changelog](https://git.sr.ht/~mil/sxmo-docs/tree/master/CHANGELOG.
       <td>$XDG_CONFIG_HOME/sxmo/userscripts</td>
       <td>Directory to place user scripts which will automatically appear in the menu system</td>
     </tr>
+    <tr>
+      <td>$XDG_CONFIG_HOME/sxmo/hooks/ring</td>
+      <td>Executable script to run when the phone is receiving a call / rings</td>
+    </tr>
   </tbody>
 </table>
 
