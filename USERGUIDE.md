@@ -344,6 +344,10 @@ refer to [the changelog](https://git.sr.ht/~mil/sxmo-docs/tree/master/CHANGELOG.
       <td>$XDG_CONFIG_HOME/sxmo/hooks/ring</td>
       <td>Executable script to run when the phone is receiving a call / rings</td>
     </tr>
+    <tr>
+      <td>$XDG_CONFIG_HOME/sxmo/hooks/sms</td>
+      <td>Executable script to run when the phone is receiving a text</td>
+    </tr>
   </tbody>
 </table>
 
