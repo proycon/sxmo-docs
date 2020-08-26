@@ -342,11 +342,17 @@ refer to [the changelog](https://git.sr.ht/~mil/sxmo-docs/tree/master/CHANGELOG.
     </tr>
     <tr>
       <td>$XDG_CONFIG_HOME/sxmo/hooks/ring</td>
-      <td>Executable script to run when the phone is receiving a call / rings</td>
+      <td>
+	<p>Executable script to run when the phone is receiving a call / rings</p>
+	<p>This script is called with "$1" set to the incoming number and contact name.</p>
+      </td>
     </tr>
     <tr>
       <td>$XDG_CONFIG_HOME/sxmo/hooks/sms</td>
-      <td>Executable script to run when the phone is receiving a text</td>
+      <td>
+	<p>Executable script to run when the phone is receiving a text</p>
+	<p>This script is called with "$1" set to the incoming number and contact name.</p>
+      </td>
     </tr>
   </tbody>
 </table>
