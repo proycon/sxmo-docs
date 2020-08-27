@@ -49,33 +49,56 @@ The default button bindings are:
 **Swipe gestures**
 
 In addition to the button bindings provided through dwm, a custom application
-called [lisgd](http://git.sr.ht/~mil/lisgd) was developed to provide 
-touchscreen swipe gestures within Sxmo.
+called [lisgd](http://git.sr.ht/~mil/lisgd) was developed to provide
+touchscreen swipe gestures within Sxmo. These gestures are sensitive to the edge of the screen where the gesture is initiated
+or where they end up, and some are sensitive to the length/distance of the swipe. Gestures in the main part of the
+screen, staying clear of the edges, are usually not interpreted and passed to the underlying application unmodified
+(assuming it has gesture support).
 
-Wherein L=left, R=right, D=down, U=up, the default swipe gestures are:
+The SXMO gestures are visualized in the following schematic:
 
-  - **1 finger R-to-L**: Focus next tag
-  - **1 finger L-to-R**: Focus previous tag
-  - **1 finger LD-to-RU**: Increase volume
-  - **1 finger RU-to-LD**: Decrease volume
-  - **1 finger RD-to-LU**: Increase brightness
-  - **1 finger LU-to-RD**: Decrease brightness
-  - **2 fingers R-to-L**: Move focused application to next tag
-  - **2 fingers L-to-R**: Move focused application to previous tag
-  - **2 fingers D-to-U**: Launch onscreen keyboard, svkbd
-  - **2 fingers U-to-D**: Close onscreen keyboard, svkbd
+![gestures](assets/sxmo_gestures.png)
 
-Note, earlier versions of Sxmo based on lisgd prior to version 0.1 used 3 and
-four finger gestures; please update to get the up-to-date gestures mentioned
-above.
+The default swipe gestures are:
+
+  - **1 finger Right-to-Left from Right edge**: Focus next tag/workspace
+  - **1 finger Left-to-Right from Left edge**: Focus previous tag/workspace
+  - **2 fingers Right-to-Left (anywhere)**: Move focused application to previous tag/workspace
+  - **2 fingers Left-to-Right (anywhere)**: Move focused application to next tag/workspace
+  - **1 finger Top-to-Bottom along the Left edge**: Volume down (long swipe: mute)
+  - **1 finger Bottom-to-Top from the Top edge**: Show the application menu
+  - **2 finger Bottom-to-Top from the Top edge**: Show the system menu
+  - **1 finger Top-to-Bottom onto the Top edge**: Close the active menu
+  - **1 finger Bottom-to-Top from the Bottom edge**: Show virtual keyboard
+  - **1 finger Top-to-Bottom onto the Bottom edge**: Hide virtual keyboard
+  - **2 finger Top-to-Bottom onto the Bottom edge**: Kill the current active window
+  - **1 finger from Bottom-Right corner, swiping diagonally**:  Rotate the screen
+  - **1 finger from Bottom-Left corner, swiping diagonally**:  Lock the device
+  - **1 finger Left-to-Right along the top edge**: Increase screen brightness
+  - **1 finger Right-to-Left along the top edge**: Decrease screen brightness
+
+There are various default gestures that translate to keypresses for the underlying application,
+this facilitates navigation in a variety of applications, including terminal-based applications, without needing the
+virtual keyboard:
+
+  - **1 finger Right-to-Left onto the Left edge**: Send Left arrow
+  - **1 finger Left-to-Right onto the Right edge**: Send Right arrow
+  - **1 finger Top-to-Bottom along the Right edge**: Send Key down (long swipe: Page down)
+  - **1 finger Bottom-to-Top along the Right edge**: Send Key up (long swipe: Page up)
+  - **1 finger Right-to-Left along the Bottom edge**: Send Backspace
+  - **1 finger Left-to-Right along the Bottom edge**: Send Return
+
+Note, earlier versions of Sxmo based on lisgd prior to version 0.2 used different gestures; please update to get the
+up-to-date gestures mentioned above.
+
 
 ## **The Menu System**
 
 Menus are a central feature of Sxmo and are navigable through using
 the Pinephone's 3 hardware buttons. Also you can use the touchscreen
 to tap your selection if you'd like as well. The menus are essentially
-scripts around a custom patched version of [dmenu](http://tools.suckless.org/dmenu). Note 
-that while using a menu, dwm's [button bindings](#strongglobal-ui-controlsstrong) won't be triggered as 
+scripts around a custom patched version of [dmenu](http://tools.suckless.org/dmenu). Note
+that while using a menu, dwm's [button bindings](#strongglobal-ui-controlsstrong) won't be triggered as
 these grab's are setup to be mutually exclusive from X's point of view.
 
 The default menu bindings for the Pinephone buttons are:
@@ -91,8 +114,8 @@ The default menu bindings for the Pinephone buttons are:
 
 The application-specific context menu (triggered by single tapping the volume
 raise key) lets you you access application-specific features of the currently
-focused window. For example while using mpv, the application-specific 
-context menu lets you pause the video, increase/decrease volume, seek, etc. 
+focused window. For example while using mpv, the application-specific
+context menu lets you pause the video, increase/decrease volume, seek, etc.
 You can reference the [sxmo_appmenu.sh](https://git.sr.ht/~mil/sxmo-utils/tree/master/scripts/core/sxmo_appmenu.sh) script for a full list of functionality.
 
 **2. Global system menu (Sys)**
@@ -122,11 +145,12 @@ aforementioned and selecting *Config*. This menu let you:
 
 
 ## **Screen Lock**
+
 A custom application ([sxmo_screenlock](https://git.sr.ht/~mil/sxmo-utils/tree/master/programs/sxmo_screenlock.c))
-enables you to lock the screen so no tap events are processed. This application 
+enables you to lock the screen so no tap events are processed. This application
 also allows you to enter suspend (deep sleep / CRUST). You can activate the
 screen lock by tapping the volume raise key three times quickly or holding the
-volume raise key down.  You will see the Pinephone's blue LED indicator activate. 
+volume raise key down.  You will see the Pinephone's blue LED indicator activate.
 
 The Screenlock has three modes:
 
@@ -155,10 +179,16 @@ blinking stops and you will be kicked back into deep sleep mode. The purpose of
 this 5 second timeout is so that if you accidently press the powerkey when the
 phone is in your pocket, you won't inadvertently be kicked out of CRUST.
 
+You can set the environment variable SXMO_RTCWAKEINTERVAL to an integer indicating an interval (in seconds) when to
+temporarily wake the phone from sleep. You can use this period to receive notifications and optionally execute your own
+``rtcwake`` hook script. During this wake interval, the led will be blue and purple again when suspension is
+about to start.
+
 ## **Calls and Texting**
+
 Calling and texting is fully functional and should work out-of-the-box. Make
 sure you have the modem killswitch in the enabled position and wait a little
-bit after booting before trying modem functionality to allow the modem to 
+bit after booting before trying modem functionality to allow the modem to
 connect.
 
 Modem functionality is based on using the [dmenu menu system](#strongthe-menu-systemstrong)
@@ -231,28 +261,28 @@ this file; the contact in menus will show up as `Unknown Number`.
 An `contacts.tsv` example might look like:
 
 ```
-122345628	John Smith
-128371642	Jeff Foo
++122345628	John Smith
++128371642	Jeff Foo
++31612345678	Jan Janssen
 ```
 
 **International Numbers**
 
 Note that you should **always** prefix numbers you call out with, text to,
 or add to the contact system **with their international prefix code**
-but without the plus. Behind the scenes for `mmcli`, numbers always
+and **with** the initial plus sign. Behind the scenes for `mmcli`, numbers always
 come into the system with international prefixes from my testing. So if
 you receieve a call from the number `54321` for example; it would come
-into mmcli as `+154321` if this was a US number. To compensate for this
-behavior, our scripts strip the plus (`+`) symbol but otherwise leave the
-number *as-is*. This means if you dial, text, and store contacts *with
+into mmcli as `+154321` if this was a US number. This means if you dial, text, and store contacts *with
 the internationl prefix*, you can be assured that texts / outgoing /
 incoming calls will line up in regards to deduplication of contacts in
 menus and text message threads will stay intact.
 
 
 ## **Included Scripts and Applications**
+
 In the [global system menu](#strongincluded-menusstrong) there are entries for both applications and
-scripts. 
+scripts.
 
 **Included Scripts:**
 
@@ -276,27 +306,29 @@ scripts.
 - **Foxtrotgps**: A minimal GPS application to help you navigate the world
 
 ## **Wifi**
+
 At the time being the primary way to get connected to the Internet in Sxmo
-is through wifi. There is a menu entry in the [global system menu](#strongincluded-menusstrong) to connect 
+is through wifi. There is a menu entry in the [global system menu](#strongincluded-menusstrong) to connect
 to wifi. This is essentially this is just a wrapper to launch `nnmtui`. Make sure
 the killswitch for Wifi on your Pinephone is in the enabled position.
 
-Mobile data should be manually for now (there is no built in menu to do this); 
+Mobile data should be manually for now (there is no built in menu to do this);
 so refer to [postmarketos](https://wiki.postmarketos.org/wiki/PINE64_PinePhone_(pine64-pinephone)#Modem) pinephone documentation for that aspect.
 
 ## **Audio Routing**
+
 You can use the Audio entry in the [global system menu](#strongincluded-menusstrong)
 to toggle which audio output you want to send sound to.
 
 Note that when in a call, the audio device selected in the global system menu
-won't automatically apply; rather audio will automatically be initially routed 
-to the earpiece and then changeable through the in call menu. Upon the call 
+won't automatically apply; rather audio will automatically be initially routed
+to the earpiece and then changeable through the in call menu. Upon the call
 ending, audio is always routed back to the headphone jack.
 
 ## **Updating and Changelog**
+
 Sxmo's packages are currently distributed through packages in pmOS so
-when new package versions are periodically pushed; your install can be 
-updated through standard mechanisms using `apk`.
+when new package versions are periodically pushed; your install can be
 
 To update run:
 
@@ -326,10 +358,15 @@ refer to [the changelog](https://git.sr.ht/~mil/sxmo-docs/tree/master/CHANGELOG.
       <td>Automatically executed script executed upon starting X.</td>
     </tr>
     <tr>
+      <td>$XDG_CONFIG_HOME/sxmo/conky.conf</td>
+      <td>Your own custom conky.conf (for displaying the clock etc), overrides the default when present.</td>
+    </tr>
+    <tr>
       <td>$XDG_CONFIG_HOME/sxmo/contacts.tsv</td>
       <td>
         <p>TSV file wherein each row is: contactnumber TAB contactname</p>
         <p>If unset all contacts will show up as 'Unknown Number'</p>
+        <p>All phone numbers must be full phone numbers startings with + and the country code</p>
       </td>
     </tr>
     <tr>
@@ -354,6 +391,55 @@ refer to [the changelog](https://git.sr.ht/~mil/sxmo-docs/tree/master/CHANGELOG.
 	<p>This script is called with "$1" set to the incoming number and contact name.</p>
       </td>
     </tr>
+    <tr>
+      <td>$XDG_CONFIG_HOME/sxmo/hooks/apps</td>
+      <td>Executable script to run when display of the app menu is requested, outputs to stdout and allows you to override the default app
+      menu (see sxmo_appmenu.sh)</td>
+    </tr>
+    <tr>
+      <td>$XDG_CONFIG_HOME/sxmo/hooks/scripts</td>
+      <td>Executable script to run when display of the scripts menu is requested, outputs to stdout and allows you to override the default app
+      menu (see sxmo_appmenu.sh)</td>
+    </tr>
+    <tr>
+      <td>$XDG_CONFIG_HOME/sxmo/hooks/presuspend</td>
+      <td>Executable script that is executed prior to suspending the device. If the exit code of this script is
+      non-zero, suspend will be cancelled</td>
+    </tr>
+    <tr>
+      <td>$XDG_CONFIG_HOME/sxmo/hooks/postwake</td>
+      <td>Executable script that is executed after waking from suspension. </td>
+    </tr>
+    <tr>
+      <td>$XDG_CONFIG_HOME/sxmo/hooks/rtcwake</td>
+      <td>Executable script that is executed every time the device temporarily wakes. You can use this script to check notifications from whatever back-end you desire. The temporary wake interval (in seconds )can be configured using the environment variable $SXMO_RTCWAKEINTERVAL . If this script exits with a non-zero exit code, suspension will be cancelled.</td>
+    </tr>
+    <tr>
+      <td>$XDG_CONFIG_HOME/sxmo/hooks/lock</td>
+      <td>Executable script that is executed prior to locking the device</td>
+    </tr>
+    <tr>
+      <td>$XDG_CONFIG_HOME/sxmo/hooks/unlock</td>
+      <td>Executable script that is executed immediately after unlocking the device</td>
+    </tr>
+    <tr>
+      <td>$XDG_CONFIG_HOME/sxmo/hooks/lisgdstart</td>
+      <td>Script that is executed to start the gesture deamon, overrides the defaults (see ``sxmo_lisgdstart.sh``). This
+      allows defining custom gestures.</td>
+    </tr>
+    <tr>
+      <td>$XDG_CONFIG_HOME/sxmo/hooks/gesture</td>
+      <td>Script that is executed when a gesture is to be interpreted. It is passed the WM_CLASS of the active window as
+      first parameter and the identifier/name of the gesture (or command to run) in the second argument, as configured with lisgd. See
+      ``sxmo_gesturehandler.sh`` for details. This script allows you to define your own context-sensitive (i.e. application
+      specific) gestures.
+      </td>
+    </tr>
+	<tr>
+		<td> $XDG_CONFIG_HOME"/sxmo/hooks/notification</td>
+		<td>This script will run whenever any kind of notification is received. It can be used for example to blink the
+		led if you want to override the default behaviour</td>
+	</tr>
   </tbody>
 </table>
 
@@ -379,7 +465,7 @@ The following enviroment variables can be set:
     </tr>
     <tr>
       <td>$KEYBOARD</td>
-      <td>Keyboard to launch on single-clicking power button and used in scripts. Defaults to `svkbd-sxmo`.</td>
+      <td>Keyboard to launch on single-clicking power button and used in scripts. Defaults to `svkbd-mobile-intl` or `svkbd-sxmo`</td>
     </tr>
     <tr>
       <td>$EDITOR</td>
@@ -400,6 +486,32 @@ The following enviroment variables can be set:
         <p>Each file is expected to be a tsv; the first entry being the location; the second being lat, lon pair.</p>
       </td>
     </tr>
+    <tr>
+      <td>$SXMO_RTCWAKEINTERVAL</td>
+      <td>Integer specifying the interval in second for a temporary wake when suspended (e.g. to check notifications). Set to 0 to disable (default)</td>
+    </tr>
+    <tr>
+      <td>$SXMO_LOCK_SCREEN_OFF</td>
+      <td>Boolean, set to 1 to to immediately turn the screen off upon locking (this skips the default first stage)</td>
+    </tr>
+    <tr>
+      <td>$SXMO_LOCK_SUSPEND</td>
+      <td>Boolean, set to 1 to to immediately suspend the device upon locking (this skips the default first two stages)</td>
+    </tr>
+    <tr>
+        <td>$SVKBD_ENABLEOVERLAYS</td>
+        <td>Boolean, set to 0 to disable the overlay functionality on the virtual keyboard (svkbd) (enabled by default), the overlay
+        functionality is responsible for showing input variations such as diacritics when holding a key with a long press.</td>
+    </tr>
+    <tr>
+        <td>$SVKBD_LAYERS</td>
+        <td>Comma separated list of layers to enable on the virtual keyboard. See the svkbd source for your layout for a
+        definition of available layers.</td>
+    </tr>
+    <tr>
+        <td>$SVKBD_HEIGHTFACTOR</td>
+        <td>Integer value expressing a height fraction, a one key row of the virtual keyboard takes 1/x of the screen height.</td>
+    </tr>
   </tbody>
 </table>
 
@@ -417,6 +529,9 @@ export BROWSER=firefox
 
 # Prepopulate Subreddits menu with custom subreddits
 export SXMO_SUBREDDITS="asmr unixporn wtf"
+
+#Temporarily wake every 5 minutes during sleep
+export SXMO_RTCWAKEINTERVAL=300
 
 # Launch st that says hello world on starting enviroment
 st -e sh -c 'echo hello world!; read' &
@@ -436,7 +551,7 @@ menu item called `Userscripts` will appear in the [global system
 menu](#strongincluded-menusstrong). Note, Userscripts should be set to
 be executable.
 
-For examples of scripts Sxmo users have made for their mobile devices, see: 
+For examples of scripts Sxmo users have made for their mobile devices, see:
 
 - [~anjan/sxmo-userscripts](https://git.sr.ht/~anjan/sxmo-userscripts).
 
