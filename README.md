@@ -7,7 +7,7 @@
 [Project Overview](https://sr.ht/~mil/Sxmo) | [Install Guide](https://git.sr.ht/~mil/sxmo-docs/tree/master/INSTALLGUIDE.md) | [User Guide](https://git.sr.ht/~mil/sxmo-docs/tree/master/USERGUIDE.md) | [Contributing](https://git.sr.ht/~mil/sxmo-docs/tree/master/CONTRIBUTING.md) | [Images](http://images.lrdu.org/) | [Demo Videos](http://media.lrdu.org/sxmo_pinephone_demos)
 
 ---
-[![builds.sr.ht status](https://builds.sr.ht/~mil/sxmo-alpine.svg?name=APKBUILDs)](https://builds.sr.ht/~mil/sxmo-alpine) [![builds.sr.ht status](https://builds.sr.ht/~mil/sxmo-image-builder.svg?name=Images)](https://builds.sr.ht/~mil/sxmo-image-builder)
+[![builds.sr.ht status](https://builds.sr.ht/~mil/sxmo-image-builder.svg?name=Images)](https://builds.sr.ht/~mil/sxmo-image-builder)
 
 **Sxmo**, or Simple X Mobile, is a collection of simple and [suckless](http://suckless.org) X programs and scripts used together to create a fully functional mobile UI adhering to the [Unix philosophy](https://en.wikipedia.org/wiki/Unix_philosophy) for the [Pinephone](https://www.pine64.org/pinephone/). You control the UI largely through using the Pinephone buttons (press different numbers of times quickly for different actions) and swipe gestures.
 
