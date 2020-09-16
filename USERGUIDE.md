@@ -294,7 +294,7 @@ to the earpiece and then changeable through the in call menu. Upon the call
 ending, audio is always routed back to the headphone jack.
 
 ## **Updating and Changelog**
-Sxmo's packages are currently distributed through an Alpine repository so
+Sxmo's packages are currently distributed through packages in pmOS so
 when new package versions are periodically pushed; your install can be 
 updated through standard mechanisms using `apk`.
 
