@@ -1,5 +1,13 @@
 # **Sxmo**: Simple X Mobile - *Changelog*
 ## Image Releases:
+- **0.1.10:** 
+  - sxmo-utils: 1.1.10
+  - sxmo-dwm: 6.2.9
+  - sxmo-dmenu: 4.9.6
+  - sxmo-st: 0.8.3.3
+  - sxmo-surf: 2.0.3
+  - sxmo-svkbd: 1.0.5
+  - lisgd: 0.1.1
 - **0.1.8:** 
   - sxmo-utils: 1.1.8
   - sxmo-dwm: 6.2.8
@@ -7,7 +15,7 @@
   - sxmo-st: 0.8.3.3
   - sxmo-surf: 2.0.3
   - sxmo-svkbd: 1.0.5
-  - lisgd: 0.1.0
+  - lisgd: 0.1.1
 - **0.1.7:** 
   - sxmo-utils: 1.1.7
   - sxmo-dwm: 6.2.7
@@ -75,6 +83,64 @@
 
 ## Packages:
 ### sxmo-utils:
+#### 1.1.9 -> 1.1.10 (Published: 2020-09-12T22:58:17-05:00)
+- a48be9c	Miles Alan: Fix shellcheck errors in sxmo_{camera,rotateautotoggle.sh}
+- 1253dcd	Julian P Samaroo: Added Clear Notifications option to menu
+- 67a5a25	Miles Alan: Omit empty lines from youtube history file
+- 64cef4d	Anjandev Momi: camera: update constants for new alpine update
+- 1221e85	Andre Ramnitz: Proper xresources for xcalc
+- a60641c	Miles Alan: Retain position in RSS script when selecting items
+- 47eda92	Miles Alan: Allow multiple word queries for youtube script
+- bbdf195	Julian P Samaroo: Show one line in previewing text message to edit
+- 93de0d4	Sam Bowlby: correct variable name for incoming text number used in sms hook
+- a211d82	Miles Alan: Set MPV_HOME in xinit and add input.conf & mpv.conf
+- 561122b	Miles Alan: sxmo_camera.sh: Set cache-secs and demuxer-readahead-secs to 0 to prevent lag
+- fbb431b	Miles Alan: sxmo_camera.sh: Launch rear/front camera fns in st to show startup progress
+- a426555	Miles Alan: sxmo_camera.sh: Pipe ffmpeg converted V4L2 to rawvideo data; remote X rotation
+- 607ef17	Miles Alan: Refactor camera script to use mpv instead of mplayer and delete dead code
+- 44784c1	Anjandev Momi: camera: low latency preview and picture
+- d245a00	Miles Alan: Remove userscripts entry from main menu; Let Edit Scripts remain on menu bottom
+- 7978535	Maarten van Gompel: Enhanced application/scripts menu
+- ffd3591	Miles Alan: Style fixes for autorotate script for consistency with other scripts
+- b86b152	Anjandev Momi: Added autorotate using accelerometer script
+- 565eae8	Maarten van Gompel: Updated handling of '+' in phone numbers, it is now never stripped but expected: all numbers should be full international phone numbers (including in contacts.tsv).
+- 7f2f50c	Miles Alan: Use proper ytdl flags instead of JSON output for sxmo_youtube.sh
+- f57cc7d	Miles Alan: Cleanup sxmo_youtube.sh, shellcheck, indent properly, and remove unused cndtn
+- e424bfe	Serge E. Hallyn: sxmo_vol.sh: notify after setvol too
+- f24e946	Miles Alan: Rework sxmo_youtube.sh script to use ytdl rather then codemadness youtube-cli
+
+#### 1.1.8 -> 1.1.9 (Published: 2020-08-22T17:08:48-05:00)
+- 68641aa	Miles Alan: Move LED setting to be indpendent of notification hook
+- 46acb72	Miles Alan: Kill in-progress notification hooks if the notif dir is empty
+- 747da78	Miles Alan: Fix shellcheck
+- 24c650e	Anjandev Momi: files: play mkv files in mpv
+- 3174375	Miles Alan: Improve default notificationhook to vibrate consistently
+- 45c5717	Miles Alan: Cleanup logic for notification LED setting; increase default call volume
+- 8e1c40e	Miles Alan: Delete calls from modem on terminating the in call script
+- 17fb103	Miles Alan: Create a new notification when there is a missed call
+- 5f8aad0	Miles Alan: Fix bugs with incall functionality around statusbar showing call duration
+- c5b665c	Miles Alan: Look for ATTRIB events for notifications updates; remove "Pickup" menu
+- 7559984	Miles Alan: Fix sxmo_notificationmonitor.sh to ensure script running doesnt overlap; (kill)
+- 4f118bb	Miles Alan: Add menu entry to edit scripts / open files script in Userscripts menu
+- 6b9233b	Anjandev Momi: youtube: keep search history
+- 7ec9ca2	Maarten van Gompel: pass incoming phone number to the ring hook (allows distinctive rings/actions based on caller) and added a similar sms hook
+- dbdb45b	Maarten van Gompel: smarter configuration of default keyboard if none specified; now compatible with upstream svkbd
+- 15aefe2	Maarten van Gompel: added mute and unmute
+- ce50d0a	Miles Alan: Re-enable notifications monitor
+- faf9bfc	Miles Alan: Refactor notifications work to use 1 interface for writing notifs & use dates
+- e6635ba	iressa: Notification patch v4
+- dcf5ddd	Miles Alan: Fix shellcheck for sxmo_urlhandler.sh
+- 1461509	Miles Alan: Add option to invert colorscheme in config menu
+- 68ff670	Julian P Samaroo: Fixed bug in sxmo_vol.sh setvol
+- b7b2fa4	Miles Alan: Add Close Menu entry to sxmo_urlhandler.sh menu
+- bc10d50	Miles Alan: Remove keynav daemon - this is only relevant for desktop usage..
+- d07b542	Miles Alan: Show Htop in application menu if present
+- a203bbf	Miles Alan: In sxmo_appmenu.sh & sxmo_urlhandler.sh only show entries if program installed
+- 4362eac	Miles Alan: sxmo_modemtext.sh - use variable name $CONTACT rather then $TDIR
+- a8910cb	Anjandev Momi: text: show logfiles in order of last contacted (use sxmo_contacts.sh)
+- a24d966	Julian P Samaroo: Fix = to == in screenlock
+- 91c77ce	Miles Alan: Actually source custom xinit so that ENV vars are properly exported
+
 #### 1.1.7 -> 1.1.8 (Published: 2020-07-26T11:22:59-05:00)
 - e20a467	Miles Alan: Bump up sxmo_appmenu.sh to allow 16 entries
 - 5c1e382	Miles Alan: Run sxmo_lisgdstart.sh instead of lisgd in sxmo_lock.sh
@@ -304,6 +370,11 @@
 - 309ba56	Miles Alan: Autoenable dmix by adding basic dmix conf to /etc/asound.conf
 
 ### sxmo-dwm:
+#### 6.2.8 -> 6.2.9 (Published: 2020-08-22T16:32:33-05:00)
+- 035d0e6	Miles Alan: Ignore drawing clientindicators in bar for svkbd
+- 38d13fd	Miles Alan: Draws a dot indicator overlayed on each tag icon for each client. The selected client is drawn as a larger horizontal line.
+- 54eacbf	Anjandev Momi: tapping on status opens appmenu
+
 #### 6.2.7 -> 6.2.8 (Published: 2020-07-25T21:05:11+02:00)
 - 749ee65	Maarten van Gompel: Use $KEYBOARD environment variable and use sxmo_lock.sh
 - 486e1bc	Miles Alan: Blink blue instead of green on launching new terminal/surf
@@ -376,6 +447,11 @@
 - 90f6878	Christopher Drelich: Function to cycle through available layouts.
 
 ### sxmo-dmenu:
+#### 4.9.5 -> 4.9.6 (Published: 2020-09-10T19:21:48-05:00)
+- fcffc6f	Miles Alan: initialindex: Correct -idx to retain position in list if past first page
+- a8581af	Miles Alan: Make highlight patch compatible with grid patch
+- 3189cd5	Miles Alan: Add -g option to display entries in the given number of grid columns
+
 #### 4.9.4 -> 4.9.5 (Published: 2020-06-16T21:40:30-05:00)
 - 18d1263	Miles Alan: Add -wm flag to run dmenu as managed WM window (e.g. no override_redirect)
 
@@ -463,6 +539,12 @@
 - fbdfb49	Miles Alan: Bump up height of keyboard
 
 ### lisgd:
+#### 0.1.0 -> 0.1.1 (Published: 2020-07-12T21:25:01-05:00)
+- ee47ac2	Miles Alan: Remove extra variable
+- 7f977f9	Nicolai Dagestad: Correctly handle the return value of realloc
+- b25cc35	Nicolai Dagestad: Add missing math library for linking
+- dce4bcf	Eyal Sawady: die: fix warning
+
 #### 0.0.3 -> 0.1.0 (Published: 2020-06-14T09:14:42-05:00)
 - 7660ad6	Miles Alan: Fix typos and alphebetically sort docs for CLI flags
 - 51ecaea	Miles Alan: Add basic manpage and sync up README documentation
