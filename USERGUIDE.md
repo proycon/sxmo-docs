@@ -390,10 +390,6 @@ The following enviroment variables can be set:
       <td>Directory that the Record script will save recordings to.</td>
     </tr>
     <tr>
-      <td>$SXMO_WEATHER_ZIPS</td>
-      <td>US Zipcodes (newline-separated) to appear in menu for Weather script.</td>
-    </tr>
-    <tr>
       <td>$SXMO_SUBREDDITS</td>
       <td>Subreddits (comma-separated) to appear in menu for Reddit script.</td>
     </tr>
