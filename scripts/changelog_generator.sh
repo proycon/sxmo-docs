@@ -1,15 +1,16 @@
 #!/usr/bin/env sh
 
 IMAGERELEASEDATES="$(echo "
-    0.1.8 ^ 2020-07-26 ^ 15:00:00
-    0.1.7 ^ 2020-07-01 ^ 00:00:00
-    0.1.6 ^ 2020-06-14 ^ 12:00:00
-    0.1.5 ^ 2020-06-07 ^ 21:15:00
-    0.1.4 ^ 2020-06-01 ^ 18:04:00
-    0.1.3 ^ 2020-05-30 ^ 18:00:00
-    0.1.2 ^ 2020-05-25 ^ 20:00:00
-    0.1.1 ^ 2020-05-23 ^ 22:00:00
-    0.1.0 ^ 2020-05-20 ^ 20:00:00
+    0.1.10 ^ 2020-09-15 ^ 20:00:00
+    0.1.8  ^ 2020-07-26 ^ 15:00:00
+    0.1.7  ^ 2020-07-01 ^ 00:00:00
+    0.1.6  ^ 2020-06-14 ^ 12:00:00
+    0.1.5  ^ 2020-06-07 ^ 21:15:00
+    0.1.4  ^ 2020-06-01 ^ 18:04:00
+    0.1.3  ^ 2020-05-30 ^ 18:00:00
+    0.1.2  ^ 2020-05-25 ^ 20:00:00
+    0.1.1  ^ 2020-05-23 ^ 22:00:00
+    0.1.0  ^ 2020-05-20 ^ 20:00:00
 " | grep .)"
 
 SOURCES="$(echo "
@@ -31,9 +32,15 @@ cloneandiffgen() {
     echo "### $PRJ:"
     git clone $SRC $PRJ >&2
     cd $PRJ
-    TAGS="$(git tag --color=never | sort -rn)"
+    TAGS="$(
+      git tag --color=never | 
+        awk '{ tag=$1; srt=$1; gsub(/[.]/, "", srt); print srt " " tag }' |
+        sort -rn |
+        cut -d ' ' -f2
+    )"
     FUTURETAG=""
     echo "$TAGS" | while IFS= read -r TAG; do
+      echo "Process $TAG for $PRJ from $SRC" >&2
       TAGPUBDATE="$(git log -1 --format=%aI $FUTURETAG)"
       echo "$FUTURETAG" | grep . >/dev/null && echo "#### $TAG -> $FUTURETAG (Published: $TAGPUBDATE)"
       echo "$FUTURETAG" | grep . >/dev/null && git log --color=never $TAG..$FUTURETAG --abbrev-commit --pretty=format:"- %h%x09%an: %s"
