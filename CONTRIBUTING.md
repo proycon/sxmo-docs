@@ -49,6 +49,7 @@ Our IRC channel for general adhoc development dicussion is:
 When cutting a new release of sxmo:
 
 1. Tag the release in git (sxmo-utils, sxmo-dwm, etc.)
+	1. Include the changelog in the tag message
 2. Send a pull request to pmaports to update the changed sxmo packages
 3. Send an email to the mailing list (sxmo-announce) containing atleast the following info:
 	1. New sxmo release will be available soon!
