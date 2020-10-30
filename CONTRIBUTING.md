@@ -41,3 +41,39 @@ tips on how to get started using git-send-email.
 Our IRC channel for general adhoc development dicussion is:
 
 `#sxmo` on `irc.freenode.net`
+
+# Information for Maintainers
+
+## New Release
+
+When cutting a new release of sxmo:
+
+1. Tag the release in git (sxmo-utils, sxmo-dwm, etc.)
+2. Send a pull request to pmaports to update the changed sxmo packages
+3. Send an email to the mailing list (sxmo-announce) containing atleast the following info:
+	1. New sxmo release will be available soon!
+	2. Description of which repos have been updated (sxmo-utils, sxmo-dwm, etc.)
+	3. A paragraph detailing major changes
+	4. An Annotated Summary of Changes - Thank the contributors
+	5. Description of breaking changes
+	6. Where to get the new images or how to update from an existing release
+	7. Any other pmos related issues (update-u-boot, updating modem firmware, etc.)
+
+
+Note: Versioning numbers for suckless forks follow the scheme: sucklessv.sxmov
+- For example, with the dmenu fork, checkout 4.9 as upstream-4.9 and 
+commit new versions as 4.9.x; wherein x is the Sxmo version.
+
+
+
+## Accepting a Patch
+
+1. Contributor submits a patch
+2. Maintainer A assign themselves to the patch and tests the patch
+3. If the patch passes testing, Maintainer A can ask Maintainer B if they're unsure about the code quality.
+4. Sign the commit with `git am -s`
+
+Note: Unless the change is trivial, the maintainer must send their 
+change to mailing list to be reviewed by another maintainer or a member
+of the sxmo community
+
