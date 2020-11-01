@@ -88,8 +88,20 @@ virtual keyboard:
   - **1 finger Right-to-Left along the Bottom edge**: Send Backspace
   - **1 finger Left-to-Right along the Bottom edge**: Send Return
 
-Note, earlier versions of Sxmo based on lisgd prior to version 0.2 used different gestures; please update to get the
-up-to-date gestures mentioned above.
+**Important note**: earlier versions of Sxmo prior to 1.2.0 used different gestures, if you are not on 1.2.0 yet you
+won't have the above gestures yet but these old ones:
+
+-  - **1 finger R-to-L**: Focus next tag
+-  - **1 finger L-to-R**: Focus previous tag
+-  - **1 finger LD-to-RU**: Increase volume
+-  - **1 finger RU-to-LD**: Decrease volume
+-  - **1 finger RD-to-LU**: Increase brightness
+-  - **1 finger LU-to-RD**: Decrease brightness
+-  - **2 fingers R-to-L**: Move focused application to next tag
+-  - **2 fingers L-to-R**: Move focused application to previous tag
+-  - **2 fingers D-to-U**: Launch onscreen keyboard, svkbd
+-  - **2 fingers U-to-D**: Close onscreen keyboard, svkbd
+
 
 
 ## **The Menu System**
