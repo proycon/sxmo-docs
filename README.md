@@ -8,6 +8,7 @@
 
 ---
 [![builds.sr.ht status](https://builds.sr.ht/~mil/sxmo-image-builder.svg?name=Images)](https://builds.sr.ht/~mil/sxmo-image-builder)
+[![builds.sr.ht status](https://builds.sr.ht/~proycon/sxmo-build.svg?name=Nightly)](https://builds.sr.ht/~proycon/sxmo-build?)
 
 **Sxmo**, or Simple X Mobile, is a collection of simple and [suckless](http://suckless.org) X programs and scripts used together to create a fully functional mobile UI adhering to the [Unix philosophy](https://en.wikipedia.org/wiki/Unix_philosophy) for the [Pinephone](https://www.pine64.org/pinephone/). You control the UI largely through using the Pinephone buttons (press different numbers of times quickly for different actions) and swipe gestures.
 
