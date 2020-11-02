@@ -1,5 +1,13 @@
 # **Sxmo**: Simple X Mobile - *Changelog*
 ## Image Releases:
+- **0.1.11:** 
+  - sxmo-utils: 1.1.11
+  - sxmo-dwm: 6.2.9
+  - sxmo-dmenu: 4.9.6
+  - sxmo-st: 0.8.3.3
+  - sxmo-surf: 2.0.3
+  - sxmo-svkbd: 1.0.5
+  - lisgd: 0.1.1
 - **0.1.10:** 
   - sxmo-utils: 1.1.10
   - sxmo-dwm: 6.2.9
@@ -83,6 +91,21 @@
 
 ## Packages:
 ### sxmo-utils:
+#### 1.1.10 -> 1.1.11 (Published: 2020-10-30T13:01:15-04:00)
+- 5f5cc6e	Anjandev Momi: Added button for build status
+- 8d5eda8	Reed Wade: Add automatic shellchecks with CI
+- 55887d9	Anjandev Momi: update megiaudioroute.c for 5.9 kernel
+- c8ca9e8	Sam Bowlby: fixed renamed alsa controls
+- b78a3ca	Miles Alan: Add sxmo_networks.sh script to manage nmcli connections
+- deb83c0	Miles Alan: Don't source /etc/profile & $HOME/.profile if nonexistant in xinit
+- f16b3f9	Miles Alan: Add sxmo_vibratepine to programs list for Makefile
+- 7830d95	Maarten van Gompel: also source ~/.profile when looking for envvars
+- 41f2adf	Serge E. Hallyn: Makefile: be a little more conventional
+- 5a4ce87	Serge E. Hallyn: screenlock: set max field width for sprintf
+- 2cec0fc	Serge E. Hallyn: Enable irq wakeups
+- c94e58f	Anjandev Momi: modemmonitor: fixed no contact name displayed in notifications and new folders without +
+- 4c24155	Miles Alan: Don't delete leading + from incoming calls in sxmo_modemmonitor.sh
+
 #### 1.1.9 -> 1.1.10 (Published: 2020-09-12T22:58:17-05:00)
 - a48be9c	Miles Alan: Fix shellcheck errors in sxmo_{camera,rotateautotoggle.sh}
 - 1253dcd	Julian P Samaroo: Added Clear Notifications option to menu
