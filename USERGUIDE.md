@@ -453,6 +453,12 @@ refer to [the changelog](https://git.sr.ht/~mil/sxmo-docs/tree/master/CHANGELOG.
       </td>
     </tr>
     <tr>
+      <td>$XDG_CONFIG_HOME/sxmo/hooks/pickup</td>
+      <td>
+	<p>Executable script to run when the phone is accepting an incoming call</p>
+      </td>
+    </tr>
+    <tr>
       <td>$XDG_CONFIG_HOME/sxmo/hooks/sms</td>
       <td>
 	<p>Executable script to run when the phone is receiving a text</p>
