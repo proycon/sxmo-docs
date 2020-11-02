@@ -515,6 +515,21 @@ Note: `$XDG_CONFIG_HOME` by default is equal to `~/.config`
 
 **Environment Variables**
 
+
+<table>
+  <tbody>
+    <tr>
+      <td>$XDG_CACHE_HOME/sxmo/dwm.log</td>
+      <td>
+	<p>dwm log but any scripts launched by sxmo will also log their output to this file.</p>
+	<p>dwm.log is helpful for debugging if your hooks are not working</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+Note: `$XDG_CACHE_HOME` by default is equal to `~/.cache`
+
 The following enviroment variables can be set:
 
 <table>
