@@ -49,7 +49,7 @@ Our IRC channel for general adhoc development dicussion is:
 **Steps:**
 
 1. Tag the release in git (sxmo-utils, sxmo-dwm, etc.)
-	1. Include the changelog in the tag message (use [changelog_generator.sh](https://git.sr.ht/~mil/sxmo-docs/tree/master/scripts/changelog_generator.sh)).
+	1. Include the changelog in the tag message
 2. Send a pull request to pmaports to update the changed sxmo packages
 3. Send an email to the mailing list (sxmo-announce) containing atleast the following info:
 	1. New Sxmo release will be available soon!
