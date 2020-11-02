@@ -11,7 +11,7 @@ The Sxmo project from a development point of view is a combination of a few diff
 1. [sxmo-utils](http://git.sr.ht/~mil/sxmo-utils): A catchall repository for scripts, configuration files, and C programs that hold Sxmo together. This contains things like the modem scripts, menu scripts, screenlock program, setuid programs for controlling the PP LEDs, brightness, etc, and all other scripts.
 2. [lisgd](http://git.sr.ht/~mil/lisgd): A custom piece of software for gestures built from scratch for Sxmo
 3. [Suckless forks](https://sr.ht/~mil/Sxmo/sources): Forks of [Suckless](http://suckless.org) software which has been mobile optimized and designed to fit within the larger Sxmo project
-4. [sxmo-image-builder](http://git.sr.ht/~mil/sxmo-image-builder): CI that builds images for the Pinephone on sr.ht infra via pmbootstrap
+4. [sxmo-image-builder](http://git.sr.ht/~sxmo-infra/sxmo-image-builder): CI that builds images for the Pinephone on sr.ht infra via pmbootstrap
 
 All of the Sxmo project source repositories can be viewed at:
 
@@ -42,17 +42,17 @@ Our IRC channel for general adhoc development dicussion is:
 
 `#sxmo` on `irc.freenode.net`
 
-# Information for Maintainers
+## Information for Maintainers
 
-## New Release
+### Releases: Steps for cutting a new release of an Sxmo package
 
-When cutting a new release of sxmo:
+**Steps:**
 
 1. Tag the release in git (sxmo-utils, sxmo-dwm, etc.)
 	1. Include the changelog in the tag message
 2. Send a pull request to pmaports to update the changed sxmo packages
 3. Send an email to the mailing list (sxmo-announce) containing atleast the following info:
-	1. New sxmo release will be available soon!
+	1. New Sxmo release will be available soon!
 	2. Description of which repos have been updated (sxmo-utils, sxmo-dwm, etc.)
 	3. A paragraph detailing major changes
 	4. An Annotated Summary of Changes - Thank the contributors
@@ -60,14 +60,35 @@ When cutting a new release of sxmo:
 	6. Where to get the new images or how to update from an existing release
 	7. Any other pmos related issues (update-u-boot, updating modem firmware, etc.)
 
-
-Note: Versioning numbers for suckless forks follow the scheme: sucklessv.sxmov
-- For example, with the dmenu fork, checkout 4.9 as upstream-4.9 and 
+**Notes on Package Versioning**:
+Versioning numbers for suckless forks follow the scheme: sucklessv.sxmov.
+For example, with the dmenu fork, checkout 4.9 as upstream-4.9 and
 commit new versions as 4.9.x; wherein x is the Sxmo version.
 
+### Releases: Steps for cutting a new bootable SD-card Sxmo release image
+
+**Steps**:
+
+1. Wait for packages to be available in pmOS / Alpine repositories,
+   image baker script  uses latest packages available using pmbootstrap in
+   pmOS so this step needs to be done slightly after packages are merged
+2. Bump the version variable on [sxmo-image-builder](https://git.sr.ht/~sxmo-infra/sxmo-image-builder)
+   in a commit.
+2. This builds a new image and uploads it to [http://images.lrdu.org/](http://images.lrdu.org/),
+   wait for it to upload.
+3. Bump the version (add a new entry) in the [changelog generator script](https://git.sr.ht/~mil/sxmo-docs/tree/master/scripts/changelog_generator.sh)
+4. Rerun the changelog generator script via running:
+   `./scripts/changelog_generator.sh genreleasespage > CHANGELOG.md`
+
+**Notes on Image Versioning**:
+The current versioning scheme for images is that tagged image minor
+releases correlate to the sxmo-utils minor version number. This wasn't
+the case for the first few images, but has lined up since 0.1.3. E.g. so
+sxmo-utils 1.1.3 lines up with the image 0.1.3 and this same schema has
+been in place since. This may change in the future.
 
 
-## Accepting a Patch
+### Accepting a Patch
 
 1. Contributor submits a patch
 2. Maintainer A assign themselves to the patch and tests the patch
