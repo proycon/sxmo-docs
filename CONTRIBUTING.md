@@ -42,7 +42,7 @@ Our IRC channel for general adhoc development dicussion is:
 
 `#sxmo` on `irc.freenode.net`
 
-## Information for Maintainers
+## **Information for Maintainers**
 
 ### Releases: Steps for cutting a new release of an Sxmo package
 
