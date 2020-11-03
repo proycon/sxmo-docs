@@ -17,6 +17,12 @@ All of the Sxmo project source repositories can be viewed at:
 
 [Project source repositories](https://sr.ht/~mil/Sxmo/sources)
 
+## **Testing Nightly**
+We always need help testing the latest development version of sxmo.
+To help test sxmo's latest development version, you can run `sxmo_build_all.sh` from:
+[~proycon/sxmo-build](https://git.sr.ht/~proycon/sxmo-build)
+
+Please report bugs to the [bug tracker](#strongsubmitting-bugs-or-feature-requestsstrong) or join us in [irc](#strongirc-channelstrong) for help.
 
 ## **Submitting Bugs or Feature Requests**
 We use the bug tracker at:
