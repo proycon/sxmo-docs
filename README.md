@@ -7,7 +7,7 @@
 [Project Overview](https://sr.ht/~mil/Sxmo) | [Install Guide](https://git.sr.ht/~mil/sxmo-docs/tree/master/INSTALLGUIDE.md) | [User Guide](https://git.sr.ht/~mil/sxmo-docs/tree/master/USERGUIDE.md) | [Contributing](https://git.sr.ht/~mil/sxmo-docs/tree/master/CONTRIBUTING.md) | [Images](http://images.lrdu.org/) | [Demo Videos](http://media.lrdu.org/sxmo_pinephone_demos) | [Changelog](https://git.sr.ht/~mil/sxmo-docs/tree/master/CHANGELOG.md)
 
 ---
-[![builds.sr.ht status](https://builds.sr.ht/~sxmo-infra/sxmo-image-builder.svg?name=Rel%20Img)](https://builds.sr.ht/~sxmo-infra/sxmo-image-builder)
+[![builds.sr.ht status](https://builds.sr.ht/~sxmo-infra/sxmo-image-builder.svg?name=Release%20Img)](https://builds.sr.ht/~sxmo-infra/sxmo-image-builder)
 [![builds.sr.ht status](https://builds.sr.ht/~sxmo-infra/sxmo-image-builder-nightly.svg?name=Nightly%20Img)](https://builds.sr.ht/~sxmo-infra/sxmo-image-builder-nightly)
 [![builds.sr.ht status](https://builds.sr.ht/~proycon/sxmo-build.svg?name=Nightly%20Pkgs)](https://builds.sr.ht/~proycon/sxmo-build?)
 
