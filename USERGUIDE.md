@@ -188,15 +188,15 @@ The W in the title bar will appear when your wifi is active.
 
 ### **Sound**
 
-The title bar will show which audio output is active with S<INT> (speaker active), H<INT> (headphones active), or E<INT> (earphone active).
+The title bar will show which audio output is active with `S<INT>` (speaker active), `H<INT>` (headphones active), or `E<INT>` (earphone active).
 
-The <INT> value is how loud a given output is set.
+The `<INT>` value is how loud a given output is set.
 
 ### **Battery**
 
-The titlebar will show D<INT>% if the battery is not charging or C<INT>% if the battery is charging.
+The title bar will show `D<INT>%` if the battery is not charging or `C<INT>%` if the battery is charging.
 
-The <INT> value shows what percentage of the battery is filled.
+The `<INT>` value shows what percentage of the battery is filled.
 
 ### **Time**
 
