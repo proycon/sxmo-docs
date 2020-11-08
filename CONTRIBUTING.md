@@ -39,9 +39,25 @@ The mailing list is at:
 
 [https://lists.sr.ht/~mil/sxmo-devel](https://lists.sr.ht/~mil/sxmo-devel)
 
+
 If you're new to development using `git-send-email` don't be discouraged and please still contribute!
-You can check out the guide at: [https://git-send-email.io/](https://git-send-email.io/) for some
-tips on how to get started using git-send-email.
+
+### **Quick Start**
+
+1. Change the default subject prefix from "PATCH" to "PATCH <NAME-OF-REPO>" by
+   running this command (only needed once).
+   ```shell-session
+   $ git config --local format.subjectPrefix "PATCH <NAME-OF-REPO>"
+   ```
+   If you wanted to submit a change for sxmo-utils, change `<NAME-OF-REPO>` in the command above to `sxmo-utils`.
+2. Rebase your commits on top of the latest `master`.
+3. Send the patch to the mailing list:
+   ```shell-session
+   $ git send-email --to="~mil/sxmo-devel@lists.sr.ht" origin/master
+   ```
+
+Also, you can check out the guide at: [https://git-send-email.io/](https://git-send-email.io/) for a guided tutorial on using git-send-email.
+
 
 ## **IRC Channel**
 Our IRC channel for general adhoc development dicussion is:
