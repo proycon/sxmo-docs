@@ -156,6 +156,49 @@ aforementioned and selecting *Config*. This menu let you:
 - Upgrade packages
 
 
+## **Status Bar**
+
+The status bar located at the top will look something like:
+
+1 2 3 4 []= Vis                M W S26 D67% 00:56
+
+1,2,3,4 are the various workspaces that you have. Tapping one of these numbers will take you to that workspace.
+
+### **Layouts**
+DWM is a dynamic window manager with a master-slave stack layout.
+As such, the window manager automatically decides where windows should be placed.
+The algorithm used to decide where windows should be placed is governed by the icon to the right of the 4th workspace icon.
+Open some windows and you should get an understanding of the various layouts.
+By default, the layout is set to "[]=" and tapping icon representing the current layout will cycle through the available layouts.
+
+When the "[ ]" layout is active, the number of open windows is displayed in the [ ].
+This layout will only show one window that takes up the entire workspace.
+By tapping the left and right hand side of the title bar, you can cycle back and forth between the windows that are open.
+
+For more info on DWM and other layouts that you can patch in, see the [upstream website for dwm](https://dwm.suckless.org/).
+
+### **Modem**
+If you are in a call, the length of the call will be display adjacent to the title bar (Vis in the example status bar shown).
+
+The M in the title bar will appear when your modem is active and you will receive incoming calls and texts.
+The W in the title bar will appear when your wifi is active.
+
+### **Sound**
+
+The title bar will show which audio output is active with S<INT> (speaker active), H<INT> (headphones active), or E<INT> (earphone active).
+
+The <INT> value is how loud a given output is set.
+
+### **Battery**
+
+The titlebar will show D<INT>% if the battery is not charging or C<INT>% if the battery is charging.
+
+The <INT> value shows what percentage of the battery is filled.
+
+### **Time**
+
+The time is shown in 24 hour format as the last item in the status bar.
+
 ## **Screen Lock**
 
 A custom application ([sxmo_screenlock](https://git.sr.ht/~mil/sxmo-utils/tree/master/programs/sxmo_screenlock.c))
