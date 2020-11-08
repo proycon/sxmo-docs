@@ -11,6 +11,7 @@
 - [Global UI Controls](#strongglobal-ui-controlsstrong)
 - [The Menu System](#strongthe-menu-systemstrong)
 - [Included Menus](#strongincluded-menusstrong)
+- [Status Bar](#strongstatus-barstrong)
 - [Screenlock](#strongscreen-lockstrong)
 - [Calls and Texting](#strongcalls-and-textingstrong)
 - [Included Scripts and Applications](#strongincluded-scripts-and-applicationsstrong)
