@@ -525,6 +525,11 @@ Note: `$XDG_CONFIG_HOME` by default is equal to `~/.config`
 	<p>dwm.log is helpful for debugging if your hooks are not working</p>
       </td>
     </tr>
+	<tr>
+      <td>$XDG_CACHE_HOME/sxmo/youtubehistory.tsv</td>
+      <td>This log file will save all the terms you've searched for using the youtube script.</td>
+	</tr>
+
   </tbody>
 </table>
 
