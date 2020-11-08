@@ -161,7 +161,9 @@ aforementioned and selecting *Config*. This menu let you:
 
 The status bar located at the top will look something like:
 
+```
 1 2 3 4 []= Vis                M W S26 D67% 00:56
+```
 
 1,2,3,4 are the various workspaces that you have. Tapping one of these numbers will take you to that workspace.
 
