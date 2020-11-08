@@ -200,7 +200,7 @@ The <INT> value shows what percentage of the battery is filled.
 
 ### **Time**
 
-The time is shown in 24 hour format as the last item in the status bar.
+The current time is shown in 24 hour format as the last item in the status bar.
 
 ## **Screen Lock**
 
