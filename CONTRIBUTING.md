@@ -20,7 +20,8 @@ All of the Sxmo project source repositories can be viewed at:
 ## **Testing Nightly**
 We always need help testing the latest development version of sxmo.
 To help test sxmo's latest development version, you can run `sxmo_build_all.sh` from:
-[~proycon/sxmo-build](https://git.sr.ht/~proycon/sxmo-build)
+[~proycon/sxmo-build](https://git.sr.ht/~proycon/sxmo-build).
+You can download a pre-baked nightly image from [here](http://images.lrdu.org/pinephone/).
 
 Please report bugs to the [bug tracker](#strongsubmitting-bugs-or-feature-requestsstrong) or join us in [irc](#strongirc-channelstrong) for help.
 
