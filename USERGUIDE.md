@@ -20,6 +20,7 @@
 - [Resize SD Card Size](#strongresize-sd-card-sizestrong)
 - [Updating and Changelog](#strongupdating-and-changelogstrong)
 - [User Customizable Functionality](#stronguser-customizable-functionalitystrong)
+- [Files](#strongFilesstrong)
 
 ## **Global UI Controls**
 
@@ -660,3 +661,14 @@ the scripts on your system for temporary fixes and please consider
 [contributing](https://git.sr.ht/~mil/sxmo-docs/tree/master/CONTRIBUTING.md)
 your changes if you believe your modifications may be useful to other
 users.
+
+
+## **Files**
+
+The sxmo_files.sh script (accessible via sxmo_appmenu.sh) follows the
+[XDG MIME Applications](https://wiki.archlinux.org/index.php/XDG_MIME_Applications)
+standard. We have our own custom xdg-open implementation called sxmo_open.sh
+that will parse the mimeapps.list files and open the default application
+as set by the user. To change a default application review
+[the format](https://wiki.archlinux.org/index.php/XDG_MIME_Applications#Format)
+of the mimeapps.list and edit `~/.config/mimeapps.list`.
