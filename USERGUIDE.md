@@ -630,6 +630,9 @@ export SXMO_RTCWAKEINTERVAL=300
 
 # Launch st that says hello world on starting enviroment
 st -e sh -c 'echo hello world!; read' &
+
+# turn on modemmonitor on login
+sxmo_modemmonitortoggle.sh on
 ```
 
 Place the contents above into `~/.config/sxmo/xinit` and restart X and
