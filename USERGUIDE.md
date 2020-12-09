@@ -307,16 +307,6 @@ When a new text message comes in:
 - The green LED will trigger
 - To view the new text message, refer to the **Texting** section above
 
-
-The monitoring script is disabled by default.
-To automatically turn on the modem on login, add the following line to your "$XDG_CONFIG_HOME/sxmo/xinit":
-
-```
-sleep 60 && sxmo_modemmonitortoggle.sh & # need to sleep because modem is not immediately available
-```
-
-Make sure the executable bit is set on "$XDG_CONFIG_HOME/sxmo/xinit".
-
 **Contacts System**
 
 The Sxmo contacts system based on a plain TSV file that can be placed at
