@@ -21,6 +21,7 @@
 - [Updating and Changelog](#strongupdating-and-changelogstrong)
 - [User Customizable Functionality](#stronguser-customizable-functionalitystrong)
 - [Files](#strongFilesstrong)
+- [XDM](#strongXDMstrong)
 
 ## **Global UI Controls**
 
@@ -665,3 +666,12 @@ that will parse the mimeapps.list files and open the default application
 as set by the user. To change a default application review
 [the format](https://wiki.archlinux.org/index.php/XDG_MIME_Applications#Format)
 of the mimeapps.list and edit `~/.config/mimeapps.list`.
+
+
+## **XDM**
+Our login manager - XDM's background can be set by changing the file
+located at `/usr/lib/X11/xdm/wallpaper.jpg` to your desired background.
+
+Further customization can be done by the user by cloning
+[~proycon/sxmo-xdm-config](https://git.sr.ht/~proycon/sxmo-xdm-config),
+editting the files, and running make.
