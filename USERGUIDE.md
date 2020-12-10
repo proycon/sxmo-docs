@@ -673,5 +673,5 @@ Our login manager - XDM's background can be set by changing the file
 located at `/usr/lib/X11/xdm/wallpaper.jpg` to your desired background.
 
 Further customization can be done by the user by cloning
-[~proycon/sxmo-xdm-config](https://git.sr.ht/~proycon/sxmo-xdm-config),
-editting the files, and running make.
+[~mil/sxmo-xdm-config](https://git.sr.ht/~mil/sxmo-xdm-config),
+editing the files, and running make.
