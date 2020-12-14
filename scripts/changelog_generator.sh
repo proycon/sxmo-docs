@@ -34,11 +34,10 @@ cloneandiffgen() {
     git clone $SRC $PRJ >&2
     cd $PRJ
     TAGS="$(
-      git tag --color=never | 
-        awk '{ tag=$1; srt=$1; gsub(/[.]/, "", srt); print srt " " tag }' |
-        sort -rn |
-        cut -d ' ' -f2
+      git tag --color=never --sort=version:refname | tac | grep -v upstream
+      git tag --color=never --sort=version:refname | tac | grep upstream
     )"
+
     FUTURETAG=""
     echo "$TAGS" | while IFS= read -r TAG; do
       echo "Process $TAG for $PRJ from $SRC" >&2
