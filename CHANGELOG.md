@@ -1,5 +1,13 @@
 # **Sxmo**: Simple X Mobile - *Changelog*
 ## Image Releases:
+- **1.2.0:** 
+  - sxmo-utils: 1.2.0
+  - sxmo-dwm: 6.2.10
+  - sxmo-dmenu: 4.9.7
+  - sxmo-st: 0.8.3.3
+  - sxmo-surf: 2.0.3
+  - sxmo-svkbd: 1.0.5
+  - lisgd: 0.2.0
 - **0.1.11:** 
   - sxmo-utils: 1.1.11
   - sxmo-dwm: 6.2.9
@@ -91,6 +99,93 @@
 
 ## Packages:
 ### sxmo-utils:
+#### 1.1.11 -> 1.2.0 (Published: 2020-12-09T18:30:44+01:00)
+- 6750e3e	Maarten van Gompel: fix for calling postwake script after wakeup #130
+- 6ce40b7	Reed Wade: scale megapixel gtk ui x2
+- 9f11cd6	Maarten van Gompel: Implemented shortcut for picking up incoming calls #135
+- a42f160	Maarten van Gompel: make modemmonitor's dbus hooks more robust and prevent being triggered multiple times
+- 9a4df9f	Maarten van Gompel: reworking handling finished/missed calls #134
+- 2a07cab	Maarten van Gompel: implemented lookupcontactname() in call/text handler, removes non posix-compliant substitutions
+- 54f3332	Maarten van Gompel: full contact list (--all) now also includes short/special numbers #104
+- 4b4bfc8	Maarten van Gompel: explicitly delete calls after hangup/termination #134
+- 06b25c3	Maarten van Gompel: Restore audio to original state after finishing a call #133
+- 4a90d86	Maarten van Gompel: Sane message when terminating call with unknown number and more verbose output to stderr from modem scripts
+- fc05104	Anjandev Momi: added aerc to app menu
+- c421d49	Maarten van Gompel: added calcurse to app menu
+- 6f2f035	Maarten van Gompel: dino menu entry: case adjustment for consistency
+- c554044	Maarten van Gompel: Revert "sxmo_appmenu: fixed only one userscript appearing in Scripts menu"
+- 1bf1bea	Anjandev Momi: add dino (xmpp client) to apps menu
+- e067fd9	Anjandev Momi: Revert "simplify code to get phone number for incoming calls"
+- 995a80c	Maarten van Gompel: Added a shellcheckrc and allowing string replacement in scripts for now (not POSIX compliant)
+- bcf4f5c	Daniele Rogora: Workaround for reliable incoming calls waking up from CRUST
+- 0f9a86d	Anjandev Momi: sxmo_appmenu: fixed only one userscript appearing in Scripts menu
+- abd931d	Anjandev Momi: shellcheck fix: use -n instead of ! -z
+- 031bb9d	Maarten van Gompel: no need for number validation when cancelling dialer
+- 236ab9a	Anjandev Momi: Do not display text only numbers as options when dialing or composing new texts
+- f149b7e	Anjandev Momi: updated sxmo_contacts comment with acceptable numbers
+- 741defe	Anjandev Momi: Fix short phone numbers or phone numbers with text do not appear in scripts
+- b0bb9ac	Anjandev Momi: simplify code to get phone number for incoming calls
+- 17e3b62	Maarten van Gompel: modemmonitortoggle may take an argument "on" or "off" to force toggling to a desired state
+- c915de8	Maarten van Gompel: Force new process group using setgid -f when starting anything that may possibly kill an entire progress group (kill -9 0) #117
+- 9aa5c7b	Miles Alan: Standardize install path for mimeapps.list to use $PREFIX
+- fadbe72	Reed Wade: Use mono differencial as default Line Out mode
+- 8b87386	Anjandev Momi: Fixed user log out when selecting "Close Menu" in dialer
+- f2a3ad4	Anjandev Momi: Added default sxmo applications mimeapps.list
+- 08b95c6	Reed Wade: sxmo_files now respect user desktop configurations
+- a90f565	Maarten van Gompel: minor quote fix to satisfy shellcheck
+- 10f813b	Maarten van Gompel: editorcheck update: restrict to shell scripts and C programs for now, and removing the maximum line length check for now.
+- 7fb7cd7	Maarten van Gompel: various indentation fixes (spaces to tabs and stripping trailing whitespace)
+- 2438060	ivoulis: Do not start lisgd if it is not running (e.g. lockscreen)
+- 96931ce	Miles Alan: Add back saftey hook for incoming calls to delete notifications if none incoming
+- f2fc6a4	Miles Alan: Missed call rework: Use dbus to check for missed calls & properly delete pickup
+- 8abe870	Miles Alan: Make suspendtimeout for screenlock cutomizable via SXMO_SUSPENDTIMEOUTS
+- 16d77bc	Serge E. Hallyn: sxmo_weather: add wind direction
+- 7d4b729	Anjandev Momi: fix builds button to only show sxmo-utils tests
+- 0a90d03	Anjandev Momi: changed line length to 80
+- e11cf9e	Anjandev Momi: move sxmo data to XDG_DATA_HOME
+- 65f1856	Anjandev Momi: add editorconfig and editorconfig check
+- ab3bb9b	Anjandev Momi: kill the keyboard on rotation
+- cd7762d	Reed Wade: The ring hook was blocking the notification writing.
+- 6f94bb8	Reed Wade: Add a new pickup hook that trigger on accept incoming calls
+- 7066b54	Reed Wade: Give notification file to the notification hook
+- be05c10	Maarten van Gompel: quote fix as suggested by shellcheck
+- b56cd2b	Anjandev Momi: sxmo_youtube: move history file to XDG_CACHE_HOME
+- a0c6e4c	Anjandev Momi: enable bluetooth and modem drivers during crust suspend
+- acf21ef	Miles Alan: Fix wakeup from CRUST for incoming call for 5.9 kernel
+- ce188e2	Maarten van Gompel: Use $SHELL, fix after patch: Start terminal with a login shell if run from dmenu
+- 8fc92c5	Andre Ramnitz: Start terminal with a login shell if run from dmenu
+- a59aa85	Andre Ramnitz: Don't touch $TERM
+- 00846a1	Maarten van Gompel: don't stumble over single quotes when sending SMS texts and replace double quotes with double single quotes to avoid trouble (a bit patchy)
+- f539e45	Reed Wade: Prevent stderr that DRAFT_FILE could not be found.
+- 0ae9825	Reed Wade: Replace the camera script with the Megapixel app
+- cbeaecb	Serge E. Hallyn: sxmo_modemdial.sh: quiet the grep
+- 90ddbc3	Anjandev Momi: move dwm.log to $XDG_CACHE_HOME
+- 9b88aeb	Reed Wade: reopen file dmenu after handled it
+- 6199f54	Anjandev Momi: sxmo_modemtext: postpone renamed to draft. Open more contacts on ssh
+- 178c746	Maarten van Gompel: shellcheck fix after applying "more contacts" patch
+- a537bea	Maarten van Gompel: changed default background colour (to be the same as the one in sxmo-xdm-config)
+- 65d9d60	Reed Wade: Add more contacts choice to contact list
+- 0e4406b	Maarten van Gompel: added vlc to app menu
+- f6e98f2	Reed Wade: Move the send sms logic in a dedicated script
+- f0d40f2	Maarten van Gompel: Fix for shellcheck problem and whitespace issue as suggested by Reed Wade (also stripping trailing spaces)
+- 0f685fa	Maarten van Gompel: minor cleanup for "unmute" patch so it passes shellcheck
+- 56efe6e	Reed Wade: Autocomplete WPA networks with scanned ones
+- 6aaca4b	Dmytro: Unmute fix
+- 86469c9	Maarten van Gompel: applied the same logic to the system menu: fix crash on open menu if already open
+- c1aa407	Sam Bowlby: fix crash on open menu if already open
+- bfba94b	Anjandev Momi: handle missing and uncreatable notifdirs more gracefully
+- 8dc0b9c	Maarten van Gompel: Implemented suggested fix for Notifications menu fails with special characters (#78)
+- 1edb932	Reed Wade: fix a bug on picked notification file determination
+- e11d3aa	Maarten van Gompel: some minor cleanup of issues detected by shellcheck after applying the patch: 'modemmonitor: use dbus-monitor'
+- 1e00b72	Reed Wade: fix a notification bug when sms come from whitespace content number
+- e8e4c77	Maarten van Gompel: swapped the two move-window-to-next-desktop gestures, the direction of the swipe is now the direction of movement (makes more sense imho)
+- 6448587	Maarten van Gompel: complete revision of gestures, using new edge system
+- 72cc974	Julian P Samaroo: Added option to postpone and resend text messages
+- 19efcf9	Maarten van Gompel: Sep 8: call checkformissedcalls at first run, and then also any time that checkforincomingcalls did not actually find a call (i.e. ...  missed it)
+- 99099a3	Serge E. Hallyn: modemmonitor: use dbus-monitor
+- 1b45e77	Maarten van Gompel: added SXMO_LOCK_SCREEN_OFF and SXMO_LOCK_SUSPEND environment variables to set a target stage from the environment
+- 642bf1c	Maarten van Gompel: Implementing optional rtc wakeup at regular intervals, added presuspend, rtcwake and postwake scripts (with hooks) (includes missing return 0 statement caught by Serge Hallyn)
+
 #### 1.1.10 -> 1.1.11 (Published: 2020-10-30T13:01:15-04:00)
 - 5f5cc6e	Anjandev Momi: Added button for build status
 - 8d5eda8	Reed Wade: Add automatic shellchecks with CI
@@ -393,6 +488,11 @@
 - 309ba56	Miles Alan: Autoenable dmix by adding basic dmix conf to /etc/asound.conf
 
 ### sxmo-dwm:
+#### 6.2.9 -> 6.2.10 (Published: 2020-11-06T22:52:44+01:00)
+- bcdae0e	Maarten van Gompel: use $SHELL, minor fix after patch: Use $TERMCMD instead of $TERM
+- 5aa18b0	Andre Ramnitz: Use $TERMCMD instead of $TERM...
+- 5f3f22b	Maarten van Gompel: Do not allow mouse moving/resizing with main mod key (alt), as this conflicts with using alt from the virtual keyboard, set to super instead (pretty useless on phone anyway). Additionally, this patch removes spawning of the app menu by tapping the status text, as that conflicts with the new gesture system in which this is accomplished by a short vertical swipe down, starting from the top edge.
+
 #### 6.2.8 -> 6.2.9 (Published: 2020-08-22T16:32:33-05:00)
 - 035d0e6	Miles Alan: Ignore drawing clientindicators in bar for svkbd
 - 38d13fd	Miles Alan: Draws a dot indicator overlayed on each tag icon for each client. The selected client is drawn as a larger horizontal line.
@@ -470,6 +570,11 @@
 - 90f6878	Christopher Drelich: Function to cycle through available layouts.
 
 ### sxmo-dmenu:
+#### 4.9.6 -> 4.9.7 (Published: 2020-11-21T11:32:57+01:00)
+- 2bc5a7b	Galen Abell: Add optional wrap around to top/bottom of list
+- 66bb8ad	Maarten van Gompel: Revert "Add optional wrap around to top/bottom of list" because of scroll issue with cursor moving out of view
+- 87eccfd	Galen Abell: Add optional wrap around to top/bottom of list
+
 #### 4.9.5 -> 4.9.6 (Published: 2020-09-10T19:21:48-05:00)
 - fcffc6f	Miles Alan: initialindex: Correct -idx to retain position in list if past first page
 - a8581af	Miles Alan: Make highlight patch compatible with grid patch
@@ -562,6 +667,12 @@
 - fbdfb49	Miles Alan: Bump up height of keyboard
 
 ### lisgd:
+#### 0.1.1 -> 0.2.0 (Published: 2020-11-08T01:54:53-05:00)
+- 6271b52	Anjandev Momi: use $KEYBOARD env variable not hardcoded keyboard setting
+- 21a3b20	Maarten van Gompel: Set default install prefix to /usr
+- ef4b184	Maarten van Gompel: size of each edge is configurable
+- 827d4c8	Maarten van Gompel: implementing support for gestures with edge and corner detection
+
 #### 0.1.0 -> 0.1.1 (Published: 2020-07-12T21:25:01-05:00)
 - ee47ac2	Miles Alan: Remove extra variable
 - 7f977f9	Nicolai Dagestad: Correctly handle the return value of realloc
