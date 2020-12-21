@@ -598,6 +598,10 @@ The following enviroment variables can be set:
         <td>$SVKBD_HEIGHTFACTOR</td>
         <td>Integer value expressing a height fraction, a one key row of the virtual keyboard takes 1/x of the screen height.</td>
     </tr>
+    <tr>
+        <td>$DMENU_WRAP_AROUND</td>
+        <td>Boolean value specifying whether dmenu interfaces should wrap around to the top/bottom of the list while scrolling. Set to `true` to enable (disabled by default).</td>
+    </tr>
   </tbody>
 </table>
 
